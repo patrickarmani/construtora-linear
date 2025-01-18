@@ -1,0 +1,115 @@
+@media screen and (min-width: 1024px) {
+    :root {
+        /* Cores escolhidas para a paleta */
+        --primary-color: #4B4B4B;
+        --secondary-color: #B0B0B0;
+        --accent1-color: #00CED1;
+        --accent2-color: #FFA500;
+        --accent3-color: #98FB98;
+        --site-plan-background-logo: #FFFFFF;
+
+        /* Cores escolhidas de acordo com a paleta */
+        --headline-color-on-white: #4B4B4B;
+        --headline-color-on-color: #FFFFFF;
+        --paragraph-color-on-white: #4B4B4B;
+        --paragraph-color-on-color: #B0B0B0;
+        --paragraph-background-color: #FFFFFF;
+        --nav-link-color: #00CED1;
+        --nav-background-color: #4B4B4B;
+        --nav-hover-link-color: #FFA500;
+        --nav-hover-background-color: #B0B0B0;
+
+        /* Fontes selecionadas */
+        --heading-font: 'Spartan', Arial, Helvetica, sans-serif;
+        --paragraph-font: 'Oswald', Arial, Helvetica, sans-serif;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: var(--paragraph-font);
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    h1, h2, h3, h4 {
+        font-family: var(--heading-font);
+    }
+
+    /*--------------------------------------------------start header----------------------------------------------------*/
+    header {
+        /* background-color: var(--primary-color); */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 9px solid #5D7CA6;
+    }
+
+    .menu-pages {
+        background-color: var(--primary-color);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        margin-left: 12rem;
+        margin-right: 200px; /* Adiciona distância entre a logo e o menu */
+        width: 120px;
+        height: auto;
+    }
+
+    /* Remover bolets e ajustar a navegação */
+    .menu-pages ul {
+        list-style: none;         /* Remove os bollets das listas */
+        margin: 0;                /* Remove o espaço extra da lista */
+        padding: 0;               /* Remove o padding da lista */
+        display: flex;              /* Exibe os itens na horizontal */
+        gap: 15px;                  /* Espaço de 15px entre os itens */
+        
+    }
+
+    .menu-pages li {
+        width: 170px;               /* Largura de 170px para cada item */
+        height: 30px;               /* Altura de 30px para cada item */
+        padding: 5px 10px;          /* Adiciona padding para espaçamento interno dos itens */
+        border: 0.05px solid white; /* Contorno de borda com espessura de 0.05px */
+        border-radius: 6px;         /* Bordas arredondadas com raio de 6px */
+        display: flex;              /* Garante que os itens fiquem em linha */
+        justify-content: center;    /* Centraliza o conteúdo horizontalmente */
+        align-items: center;        /* Centraliza o conteúdo verticalmente */
+    }
+
+    .menu-pages a {
+        text-decoration: none;    /* Remove o sublinhado dos links */
+        color: white;              /* Cor padrão do texto */
+    }
+
+    .menu-pages a:hover {
+        color: var(--accent1-color);           /* Cor ao passar o mouse sobre o link */
+    }
+
+    .menu-pages li:hover {
+        border: 2px solid white;
+    }
+
+    .corretores {
+        background-color: #5D7CA6;
+        width: 170px;               /* Largura de 170px para cada item */
+        height: 30px;               Altura de 30px para cada item
+        padding: 5px 10px;          /* Adiciona padding para espaçamento interno dos itens */
+        border: 0.05px solid white; /* Contorno de borda com espessura de 0.05px */
+        border-radius: 6px;         /* Bordas arredondadas com raio de 6px */
+        display: flex;              /* Garante que os itens fiquem em linha */
+        justify-content: center;    /* Centraliza o conteúdo horizontalmente */
+        align-items: center;        /* Centraliza o conteúdo verticalmente */
+    }
+    
+
+    /*--------------------------------------------------end header----------------------------------------------------*/
+}

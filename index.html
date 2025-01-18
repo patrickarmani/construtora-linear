@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Patrick Marcman">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/small.css" media="(max-width: 414px)">
+    <link rel="stylesheet" href="styles/medium.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 1200px)">
+    <!--link para o Font Awesome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        
+
+        <nav class="menu-pages">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../images/logo_linear_br.png" alt="Logo da Construtora Linear">
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Linear desde 1981</a></li>
+                <li><a href="#">Empreendimentos</a></li>
+                <li><a href="#">Portifólio</a></li>
+                <li><a href="#" class="corretores">Nossos Corretores</a>
+                    <ul class="submenu">
+                        <!--Já abre o whatsapp no numero do corretor-->
+                        <li><a href="https://api.whatsapp.com/send?phone=5511977504567">Patrick/zap</a></li>
+                        <!--abre o whatsapp-->
+                        <li><a href="https://wa.me/5598888888888">Mario/zap</a></li>
+                        <!--envia mensagem direto para o zap do corretor-->
+                        <li><a href="https://wa.me/5531996085383?text=Tenho%20interesse%20no%20empreendimento!" target="_blank">
+                            Teste/zap</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <!--Icone do menu sanduiche para ser visto em celulares-->
+        <!-- <div class="menu-toggle" onclick="toggleMenu()"> -->
+            <!-- <div></div>linha 1 do sanduiche -->
+            <!-- <div></div>linha 2 do sanduiche -->
+            <!-- <div></div>linha 3 do sanduiche -->
+        <!-- </div> -->
+        </nav>
+        
+
+    </header>
+    <!--Script referente ao submeu com nomes e telefones dos corretores-->
+    <script src="scripts/menu.js"></script>
+    <!--Script referente ao menu saunduiche-->
+    <script src="scripts/hamburger_menu.js"></script>
+    <script src="scripts/open_menu_hamb.js"></script>
+
+</body>
+
+</html>

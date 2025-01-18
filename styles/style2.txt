@@ -1,0 +1,124 @@
+:root {
+  /* cores escolhidas para a paleta */
+  --primary-color: #4B4B4B;
+  --secondary-color: #B0B0B0;
+  --accent1-color: #00CED1;
+  --accent2-color: #FFA500;
+  --accent3-color: #98FB98;
+  --site-plan-background-logo: #FFFFFF;
+
+  /* fontes selecionadas*/
+  --heading-font: 'Spartan', serif;
+  --paragraph-font: 'Oswald', sans-serif;
+
+  /* Cores escolhidas de acordo com a paleta selecionada */
+  --headline-color-on-white: #4B4B4B;  /* headlines on a white background */ 
+  --headline-color-on-color: #FFFFFF; /* headlines on a colored background */ 
+  --paragraph-color-on-white: #4B4B4B; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: #B0B0B0; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #FFFFFF;
+  --nav-link-color: #00CED1;
+  --nav-background-color: #4B4B4B;
+  --nav-hover-link-color: #FFA500;
+  --nav-hover-background-color: #B0B0B0;
+}
+
+/* Layout para telas pequenas (Vertical e Paisagem) */
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 1.8rem;
+    margin: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Layout para telas maiores que 640px (Tablets e Desktops) */
+@media screen and (min-width: 641px) {
+  h1 {
+    font-size: 2.5rem;
+    margin: 1rem;
+    color: var(--primary-color);
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 5px;
+  }
+
+  nav a {
+    font-size: 1.2rem;
+  }
+}
+
+/* Paisagem (landscape) - Telas de celular na horizontal */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  img {
+    max-width: 80%;
+  }
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: var(--nav-link-color);
+  text-decoration: none;
+  font-family: var(--paragraph-font);
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+
+main {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--headline-color-on-color);
+  text-align: center;
+  padding: 1rem;
+}

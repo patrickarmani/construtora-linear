@@ -1,0 +1,211 @@
+@media (max-width: 768px) {
+
+html {
+    background-color: var(--primary-color);
+  }
+body {
+    max-width: 768px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1em;
+  }
+  
+  /*controle do tamanho da logo na pagina de plano de site*/
+  img {
+    max-width: 60%;         /* Define a largura máxima da imagem */
+    display: block;         /* Faz com que a imagem se comporte como um bloco */
+    margin: 0 auto;   
+  }
+
+  header {
+    padding: 1em;
+    text-align: center;
+    color: var(--paragraph-color-on-color);
+    background-color: var(--paragraph-background-color);
+  }
+  
+  .colortable {
+    display: none;
+  }
+  
+
+  .colors-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin: auto;
+    width: 100%;
+}
+
+  .color-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%; /* Ajustar para 40% da largura da tela */
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0.5em;
+    border: 1px solid #ccc; /* Para separação visual */
+}
+
+  .color-title {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+  .color-box {
+    width: 100%;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color); /* Substituir por variável da cor */
+    border: 1px solid #999;
+}
+
+    
+  p.colored {
+    background-color: var(--paragraph-background-color);
+    color: var(--paragraph-color-on-color);
+  }
+  nav {
+    background-color: #FFFFFF;
+    line-height: 3em;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  nav > ul {
+    list-style-type: none;
+    display: flex;
+    gap: 7px; /* Espaçamento entre os itens da barra de navegação */
+    justify-content: center; /* Centraliza os itens */
+    padding: 0;
+    margin: 0;
+  
+  }
+  nav a {
+    padding: 0 1em; /* Espaçamento lateral */
+    min-width: 70px;
+    height: 35px; /* Altura fixa das barras */
+    line-height: 35px; /* Centraliza verticalmente o texto */
+    font-family: "Oswald";
+    text-decoration: none; /* Remove sublinhado */
+    color: var(--nav-link-color);
+    background-color: #465758;; /* Cor de fundo padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza o efeito hover */
+
+    /* Sombra aplicada aqui */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra leve */
+  }
+  nav a:link, nav a:visited {
+    color: var(--nav-link-color);
+  }
+  nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+  }  
+
+  .sitemap {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    gap: 5px;
+  
+    grid-template-columns: repeat(8, 8%);
+    grid-template-rows: 3em 1.5em 1.5em 3em;
+    grid-template-areas: ". . home home . . . ."
+      ". . . top . . . ."
+      ". left left right right . . ."
+      "page2 page2 page3 page3 page4 page4 page5 page5";
+  }
+  .sitemap > div {
+  
+    text-align: center;
+  
+  }
+  .sm-home {
+    grid-area: home;
+    background-color: #999999;
+    line-height: 3em;
+  }
+  .sm-page2 {
+    grid-area: page2;
+    background-color: #999999;
+    line-height: 3em;
+  }
+  .sm-page3 {
+    grid-area: page3;
+    background-color: #999999;
+    line-height: 3em;
+  }
+
+  .sm-page4 {
+    grid-area: page4;
+    background-color: #999999;
+    line-height: 3em;
+  }
+  .sm-page5 {
+    grid-area: page5;
+    background-color: #999999;
+    line-height: 3em;
+  }
+
+  .vertical-line {
+    position: absolute;
+    width: 1px;
+    height: 27px;
+    background-color: black;
+    top: calc(120% - 110px);
+    left: 74.2%;
+}
+  
+  .top {
+    grid-area: top;
+    border-left: 1px solid;
+    height: 50px
+  }
+  
+  .left {
+    grid-area: left;
+    border-top: 1px solid;
+    width: 300%;
+    border-left: 1px solid;
+  }
+  
+  .right {
+    grid-area: right;
+    border-top: 1px solid;
+    border-right: 1px solid;
+  }
+
+  .wireframes {
+    max-width: 100%;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5); /* Sombra com deslocamento e opacidade */
+    border-radius: 5px; /* Opcional, para bordas arredondadas */
+  }
+
+  video {
+    max-width: 100%;
+  }
+
+  .linear {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    width: 300%;
+  }
+
+  .empreendimentos {
+    display: grid;
+    justify-content: center; /* Centraliza o grid horizontalmente */
+    gap: 50px; /* Espaçamento entre as células */
+    width: 300%;
+
+}
+
+}

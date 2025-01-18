@@ -1,0 +1,266 @@
+@media screen and (min-width: 1024px) {
+    :root {
+        /* cores escolhidas para a paleta */
+        --primary-color: #4B4B4B;
+        --secondary-color: #B0B0B0;
+        --accent1-color: #00CED1;
+        --accent2-color: #FFA500;
+        --accent3-color: #98FB98;
+        --site-plan-background-logo: #FFFFFF;
+      
+        /* Cores escolhidas de acordo com a paleta selecionada */
+        --headline-color-on-white: #4B4B4B;  /* headlines on a white background */ 
+        --headline-color-on-color: #FFFFFF; /* headlines on a colored background */ 
+        --paragraph-color-on-white: #4B4B4B; /* paragraph text on a white background */ 
+        --paragraph-color-on-color: #B0B0B0; /* paragraph text on a colored background */ 
+        --paragraph-background-color: #FFFFFF;
+        --nav-link-color: #00CED1;
+        --nav-background-color: #4B4B4B;
+        --nav-hover-link-color: #FFA500;
+        --nav-hover-background-color: #B0B0B0;
+    
+        /* fontes selecionadas*/
+        --heading-font: 'Spartan', Arial, Helvetica, sans-serif;
+        --paragraph-font: 'Oswald', Arial, Helvetica, sans-serif;
+      }
+    
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: var(--paragraph-font);
+      }
+    
+      body {
+        font-size: 16px;
+      
+      }
+    
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: var(--heading-font);
+    }
+    
+    main {
+        background-image: url('../images/background.jpg');
+        background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+        background-position: center center; /* Centraliza a imagem na tela */
+        background-repeat: no-repeat; /* Evita que a imagem se repita */
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Distribui os elementos */
+        flex-direction: row; /* Garante que a imagem fique à esquerda */
+        margin: 0; /* Remove margens adicionais */
+      }
+    
+      .img_principal_home {
+        position: relative;
+        width: 50%;  /* 50% da largura da tela */
+        height: 78vh; /* 80% da altura da viewport (dispositivo) */
+        object-fit: cover;  /* Garante que a imagem mantenha a proporção sem distorção */
+        margin-left: 0; /* Garante que a imagem fique encostada no lado esquerdo */
+      }
+    
+      .residencial {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 20%; /* Ocupa 20% da altura da foto principal */
+        object-fit: cover;
+        background-color: rgba(255, 255, 255, 0.3); /* Fundo branco com 30% de opacidade */
+    }
+    
+      .shadowbox {
+        width: 35%;  
+        box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.2); 
+        padding: 8px 12px;
+        background-color: white;
+        margin-right: 8%;
+        font-size: 16pt;
+      }
+      
+      /*fim do bloco de texto da página Home*/
+    
+      .presentation {
+        font-size: 19pt; /* Define o tamanho da fonte */
+        line-height: 40pt; /* Define o espaçamento entre as linhas */
+        color: var(--paragraph-color-on-white); /* Cor do texto, se necessário */
+        font-family: var(--paragraph-font); /* Fonte definida nas variáveis */
+        margin-bottom: 20px; /* Espaçamento inferior entre os parágrafos */
+        text-align: justify;
+      }
+    
+      header {
+        display: flex;
+        justify-content: space-between; /* Para dar espaçamento entre a logo e as tags */
+        align-items: center; /* Para centralizar verticalmente os itens */
+        border-bottom: 9px solid #5D7CA6; /* Linha de 3px azul abaixo do header */
+    
+      }
+      /*navegador*/
+      .menu {
+        list-style: none;  /* Remove marcadores da lista */
+        padding: 10px;
+        margin: 0;
+        display: flex;  /* Alinha itens horizontalmente */
+    }
+    
+    .menu li {
+        margin: 0 10px;
+    }
+    
+    .menu a {
+        text-decoration: none;
+        color: white;
+        font-weight: 19pt;
+        width: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+      nav {
+        background-color: #221F26; /* Cor do fundo do menu */
+        padding: 2px; /* Adiciona espaçamento interno ao menu */
+        display: flex; /* Organiza os itens do menu em linha (horizontal) */
+        justify-content: center;/*space-between;  Distribui os itens com espaço entre logo e links */
+        align-items: center; /* Alinha verticalmente os itens */
+        flex-grow: 1;  /* Faz com que o menu ocupe o espaço restante */
+     }
+      
+      /*afeta a logo do topo da pagina*/
+      .logo a {
+        border: none;  /* Garantir que os links não tenham borda */
+        display: inline-block;  /* Garantir que o link se comporte corretamente */
+    }
+      
+      nav ul a {
+        background-color: #221F26; /* Cor de fundo dos links (mesmo tom de cinza) */
+        color: white; /* Cor do texto dos links */
+        text-decoration: none; /* Remove o sublinhado dos links */
+        font-size: 16px; /* Tamanho da fonte dos links */
+        padding: 0.3rem 2rem; /* Adiciona espaçamento interno nos links */
+        border: 0.02px solid white; /* Borda branca de 0.05px */
+    
+        border-radius: 6px; /* Borda arredondada com raio de 6px */
+        transition: background-color 0.5s, border-width 0.5s, box-shadow 0.5s; /* Transições suaves */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra sutil aos itens */
+      }
+    
+    
+      nav img {
+        height: 40px;  /* Ajuste o tamanho da logo conforme necessário */
+        width: auto;  /* Mantém a proporção da imagem */
+        margin-right: 4rem;  /* Espaço à direita da logo, para separar do menu */
+        border: none;
+        box-shadow: none;
+    
+      }
+      
+      nav a:hover {
+        color:#00CED1;
+        border-width: 2px; /* Aumenta a espessura da borda ao passar o mouse */
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra mais forte ao passar o mouse */
+      }
+      
+      /* Quando a página for a selecionada, a borda fica mais espessa e com o fundo modificado */
+      nav a:active, nav a.selected {
+        background-color:  #221F26;
+        border-width: 2px; /* Borda mais espessa na página selecionada */
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+      }
+      
+      nav a:focus {
+        outline: none; /* Remove o contorno padrão ao clicar */
+      }
+      
+      nav a.corretores {
+        background-color: red;  /* Torna apenas o link com a classe corretores vermelho */
+    }
+    
+      nav a:hover.corretores {
+        background-color: #00CED1;  /* Torna apenas o link com a classe corretores vermelho */
+        color: black;
+    }
+    
+    footer {
+        width: 100%;
+        background-color: #221F26;
+        height: 13vh;
+        margin-bottom: 20px; 
+        padding: 20px;
+        border-top: 9px solid #5D7CA6;
+        position: relative;  /* Adicionando 'relative' no contêiner */
+
+    }
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    } 
+
+    .footer-container div {
+        flex: 1;
+        text-align: center;
+    }
+        
+    .social-icons a img {
+        width: 20%; /* Ajusta o tamanho das imagens das redes sociais */
+    }
+
+    .logo_footer a img {
+        width: 50%; /* Ajusta o tamanho da imagem da logo */
+        height: auto; /* Mantém a proporção da altura */
+    }
+    
+    .footertext {
+        font-size: 14px;
+        color: #fff;
+        text-align: center;
+        text-align: center;
+    }
+
+    footer a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    footer a:hover {
+        text-decoration: underline;
+    }
+    
+    .maps a img {
+        width: 20%; /* Ajusta o tamanho da imagem da localização */
+    }
+      .logo_footer {
+        position: relative;  /* Usando position absolute para a logo */
+        top: 50%;
+        left: 15%;  /* Alinha a logo 10% da largura do footer */
+      
+        height: auto;
+        width: 20%;
+    
+    }
+
+      .maps {
+        display: flex;
+        width: 30%;
+        height: auto;
+        margin-right:1%;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 1rem; /* Espaçamento entre os ícones */
+        width: 30%;
+        height: auto;
+        
+      }
+      /*navegador fim*/
+    
+    
+      

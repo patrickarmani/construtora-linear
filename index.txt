@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Patrick Marcman">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 1200px)">
+    <!--link para o Font Awesome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <header>
+        
+
+        <!--Icone do menu sanduiche para ser visto em celulares-->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div><!--linha 1 do sanduiche-->
+            <div></div><!--linha 2 do sanduiche-->
+            <div></div><!--linha 3 do sanduiche-->
+        </div>
+        
+        <!--navegação principal do site-->
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../images/logo_linear_br.png" alt="Logo da Construtora Linear">
+                </a>
+            </div>
+            
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li> 
+                <li><a href="#">Linear desde 1981</a></li>
+                <li><a href="#">Empreendimentos</a></li>
+                <li><a href="#">Portifólio</a></li>
+                <li><a href="#" class="corretores">Nossos Corretores</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <!-- Imagem lateral à esquerda -->
+        
+        <img class="img_principal_home"
+        
+        src="images/foto_principal.png" alt="Foto de destaque da construtora Linear"
+
+        />
+
+        <div class="shadowbox">
+            <!-- Título principal do site -->
+            <!--<h1>Construtora Linear</h1>-->
+            <p class="presentation">
+                Fundada em 1981, a Construtora Linear tem como alicerce
+                a excelência e o comprometimento com a qualidade em cada
+                projeto. Criando empreendimentos que se destacam não apenas
+                pela construção impecável, mas também pelas localizações 
+                estratégicas cuidadosamente selecionadas, entrega a seus
+                clientes a realização do "Sonho Concreto".
+            </p>
+        </div>
+
+        
+        
+
+    </main>
+    
+    <footer>
+
+        <div class="logo_footer">
+            <a href="index.html">
+                <img src="../images/logo_linear_br.png" alt="Logo da Construtora Linear">
+            </a>
+        </div>
+
+        <div class="maps">
+            <a href="https://www.google.com.br/maps/"><img src="images/localizar.png" alt="icone de localização"></a>
+        </div>
+        <!-- Rodapé do site com informações de contato -->
+        <p class="footertext">
+            
+            Rua Dr. Limão Sales 85, Lourdes,<br>
+            Belo Horizonte / MG / CEP: 30.000-000<br>
+            email:<a href="mailto:linear@lineaar.com.br">linear@lineaar.com.br</a> / 
+            fone:<a href="tel:+553133337777">31 3333 7777</a>
+            &copy; <span id="year"></span>
+            <script>
+                document.getElementById("year").textContent = new Date().getFullYear();
+            </script>
+            
+        </p>
+        
+        <div class="social-icons">
+            <a href="https://pt-br.facebook.com/"><img src="images/facebook.png" alt="logomarca do facebook"></a>
+            <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="logomarca do instagram"></a>
+            <a href="https://www.linkedin.com/"><img src="images/linkedin.png" alt="logomarca do linkedin"></a>
+        </div>
+
+        
+
+    </footer>
+      <!-- Outras tags HTML do corpo da página -->
+  
+  <script src="scripts/hamburger_menu.js" class="hamburger"></script>
+
+    
+</body>
+</html>
