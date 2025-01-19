@@ -155,3 +155,50 @@
         display: none;
     }
 
+    /*---------------------------------------------------Inicio do Main ---------------------------------------------------*/
+    main {
+        display: flex; /* Ativa o modelo Flexbox */
+        /* align-items: center; /* Centraliza os itens verticalmente */
+        justify-content: space-between; /*Garante espaço entre os itens*/
+        /* width: 100%; O contêiner ocupa toda a largura */
+        /* height: 80vh; O contêiner ocupa toda a altura da tela */
+        /* padding: 0 5%; Adiciona espaçamento interno nas laterais */
+        /* box-sizing: border-box; Inclui padding no cálculo de largura */
+        /* flex-direction: row; Garante que a imagem fique à esquerda */
+        /* margin: 0; Remove margens adicionais */ */
+      }
+
+      main div.img_principal_home {
+        width: 50vw; /* Define a largura */
+        height: -10rem; /* Define a altura desejada para cortar a imagem */
+        overflow: hidden; /* Esconde o conteúdo que ultrapassa os limites */
+        position: relative; /* Garante que o conteúdo da imagem seja controlado */
+      }
+    
+    
+    
+      main div.img_principal_home img {
+        width: 100%; /* Garante que a imagem ocupe a largura do contêiner */
+        height: auto; /* Mantém a proporção da imagem */
+        display: block;
+        /* position: absolute; Permite ajustar o posicionamento da imagem */
+        position:relative;
+        top: -11rem; /* entrou a imagem dentro da header */
+        /* left: 0; Alinha a parte esquerda da imagem ao contêiner */
+      }
+
+    main div.shadowbox {
+        width: 50%;
+        padding: 5rem;
+        background-color: white;
+        box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.2);
+        text-align: justify;
+        font-size: 16pt;
+        line-height: 40pt; /* Define o espaçamento entre as linhas */
+        z-index: -1000;
+    }
+      
+
+
+
+    /*--------------------------------------------------Fim do Main-------------------------------------------------------*/

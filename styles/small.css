@@ -59,7 +59,7 @@ header nav.menu-pages {
 
 header nav.menu-pages .logo img {
     margin-left: 2rem;
-    width: 150px;
+    width: 120px;
     height: auto;
 }
 
@@ -72,8 +72,9 @@ header nav.menu-pages .menu {
 .hamburger {
     position: fixed; /* Fixa o ícone na tela */
     /* display: flex; */
-    top: 2rem; /* Ajuste a distância do topo, se necessário */
+    /* top: 1rem; Ajuste a distância do topo, se necessário */
     right: 1.5rem; /* Distância de 30px da borda direita */
+    padding: 0.5rem;
     flex-direction: column;
     gap: 2px;
     cursor: pointer;
@@ -91,6 +92,7 @@ header nav.menu-pages .menu {
     background: white;
     border-radius: 0.125rem; /* Adiciona bordas arredondadas para um toque mais suave */
     transition: all 0.3s ease; /* Transição suave quando o menu é ativado */
+    box-shadow: 3px 2px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -132,7 +134,7 @@ header nav.menu-pages .menu li {
 header nav.menu-pages .menu li a {
     color: #FFFFFF;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     gap: 5px;
     width: 150px;               /* Largura de 170px para cada item */
     height: 30px;               /* Altura de 30px para cada item */
@@ -148,11 +150,11 @@ header nav.menu-pages .menu li a {
 header nav.menu-pages .menu li a:hover {
     background-color: var(--primary-color);
 
-    color: var(--nav-hover-link-color);
+    color: var(--nav-link-color);
     width: 170px;               /* Largura de 170px para cada item */
     height: 30px;               /* Altura de 30px para cada item */
     padding: 5px 10px;          /* Adiciona padding para espaçamento interno dos itens */
-    border: 3px solid white; /* Contorno de borda com espessura de 0.05px */
+    border: 2px solid white; /* Contorno de borda com espessura de 0.05px */
     border-radius: 6px;         /* Bordas arredondadas com raio de 6px */
     display: flex;              /* Garante que os itens fiquem em linha */
     justify-content: center;    /* Centraliza o conteúdo horizontalmente */
@@ -176,7 +178,7 @@ header nav.menu-pages .menu li a.corretores:hover {
 header nav.menu-pages .menu li .submenu {
     display: none;               /* Oculta o submenu por padrão */
     position: absolute;          /* Faz com que o submenu flutue */
-    background-color: rgba(0, 0, 255, 0.3); /* Azul com 30% de transparência */
+    background-color: rgba(0, 206, 209, 0.9); /* tifani com 70% de transparência */
     list-style: none;            /* Remove bolinhas da lista */
     padding: 0;
     margin: 5px 0 0 0;
@@ -193,9 +195,9 @@ header nav.menu-pages .menu li .submenu li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--primary-color);
     text-decoration: none;
-    border: 1px solid white;
+    border: 1px solid var(--accent3-color);
     border-radius: 6px;
 }
 
@@ -211,5 +213,43 @@ header nav.menu-pages .menu li .submenu li a:hover {
 .menu.show {
     display: flex;
 }
+/*---------------------------------------------------Inicio do Main ---------------------------------------------------*/
+main {
+    background-image: url('../images/sm_background.jpg');
+    background-size: cover; /* A imagem de fundo cobre todo o espaço disponível */
+    background-position: top center; /* Garante alinhamento do topo da imagem */
+    flex-direction: column; /* As imagens ficam empilhadas verticalmente */
+    justify-content: flex-start; /* Garante que o conteúdo comece no topo */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    display: flex;
+    position: absolute;
+    z-index: -1;
+  }
+
+  main .img_principal_home img {
+    width: 100%;
+    height: auto;
+  }
+
+  main div.shadowbox {
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 10px 8px 15px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  main div.shadowbox h1 {
+    
+    color:var(--headline-color-on-white);
+    font-size: 2rem;
+    text-align: left;
+    margin-left: 2rem;
+  }
+
+  main div.shadowbox p.presentation {
+    color: var(--headline-color-on-white);
+    text-align: justify;
+    padding: 1rem 2rem 1rem 2rem;
+    line-height: 20pt;
+  }
 
 }
