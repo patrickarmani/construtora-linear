@@ -39,12 +39,12 @@
         font-family: var(--heading-font);
     }
 
-      /*--------------------------------------------------start header----------------------------------------------------*/
+    /*--------------------------------------------------start header----------------------------------------------------*/
     header {
         background-color: #4a4848;
-        display: flex; /*ele vai alinhar os elementos filhos dentro do header.*/
-        justify-content: space-between; /*Espaço igual entre os itens */ 
-        align-items: center; /*Alinha os itens no centro verticalmente */
+        display: flex; /* Alinha os elementos filhos dentro do header */
+        justify-content: space-between; /* Espaço igual entre os itens */
+        align-items: center; /* Alinha os itens no centro verticalmente */
         width: 100%;
         height: auto;
         border-bottom: 9px solid #5D7CA6;
@@ -52,9 +52,8 @@
     }
 
     header nav.menu-pages {
-        display: flex; /*ele vai alinhar os elementos filhos dentro do header.*/
+        display: flex; /* Alinha os elementos filhos dentro do header */
         justify-content: space-between; /* Espaço igual entre os itens */
-
     }
 
     header nav.menu-pages .logo img {
@@ -62,53 +61,41 @@
         margin-right: 12rem; /* Adiciona distância entre a logo e o menu */
         width: 120px;
         height: auto;
-
     }
 
     header nav.menu-pages .menu {
-        display: flex;              /*Exibe os itens na horizontal */
+        display: flex; /* Exibe os itens na horizontal */
         justify-content: space-between; /* Espaço igual entre os itens */
-        list-style: none;         /* Remove os bollets das listas */
-        align-items: center;        /* Centraliza o conteúdo verticalmente */
-        margin: 0;                /* Remove o espaço extra da lista */
-        padding: 0;               /* Remove o padding da lista */
-        gap: 15px;                  /* Espaço de 15px entre os itens */
-        
+        list-style: none; /* Remove os bollets das listas */
+        align-items: center; /* Centraliza o conteúdo verticalmente */
+        margin: 0;
+        padding: 0;
+        gap: 15px; /* Espaço de 15px entre os itens */
     }
 
-    header nav.menu-pages .menu li a{
+    header nav.menu-pages .menu li a {
         background-color: var(--primary-color);
         color: #FFFFFF;
-        width: 170px;               /* Largura de 170px para cada item */
-        height: 30px;               /* Altura de 30px para cada item */
-        padding: 5px 10px;          /* Adiciona padding para espaçamento interno dos itens */
+        width: 170px; /* Largura de 170px para cada item */
+        height: 30px; /* Altura de 30px para cada item */
+        padding: 5px 10px; /* Adiciona padding para espaçamento interno dos itens */
         border: 0.05px solid white; /* Contorno de borda com espessura de 0.05px */
-        border-radius: 6px;         /* Bordas arredondadas com raio de 6px */
-        display: flex;              /* Garante que os itens fiquem em linha */
-        justify-content: center;    /* Centraliza o conteúdo horizontalmente */
-        align-items: center;        /* Centraliza o conteúdo verticalmente */
+        border-radius: 6px; /* Bordas arredondadas com raio de 6px */
+        display: flex; /* Garante que os itens fiquem em linha */
+        justify-content: center; /* Centraliza o conteúdo horizontalmente */
+        align-items: center; /* Centraliza o conteúdo verticalmente */
         box-shadow: #4B4B4B;
-        text-decoration: none;      /*Remove os sublinhados*/
+        text-decoration: none; /* Remove os sublinhados */
     }
 
     header nav.menu-pages .menu li a:hover {
         background-color: var(--primary-color);
         color: var(--accent1-color);
-        width: 170px;               /* Largura de 170px para cada item */
-        height: 30px;               /* Altura de 30px para cada item */
-        padding: 5px 10px;          /* Adiciona padding para espaçamento interno dos itens */
-        border: 3px solid white; /* Contorno de borda com espessura de 0.05px */
-        border-radius: 6px;         /* Bordas arredondadas com raio de 6px */
-        display: flex;              /* Garante que os itens fiquem em linha */
-        justify-content: center;    /* Centraliza o conteúdo horizontalmente */
-        align-items: center;        /* Centraliza o conteúdo verticalmente */
-        box-shadow: #4B4B4B;
-        text-decoration: none;      /*Remove os sublinhados*/
+        border: 3px solid white;
     }
 
     header nav.menu-pages .menu li a.corretores {
         background-color: red;
-
     }
 
     header nav.menu-pages .menu li a.corretores:hover {
@@ -117,24 +104,24 @@
         color: black;
     }
 
-        /*-------------------------------- Estilização do Submenu ------------------------------------------- */
+    /* Estilização do Submenu */
     header nav.menu-pages .menu li .submenu {
-        display: none;               /* Oculta o submenu por padrão */
-        position: absolute;          /* Faz com que o submenu flutue */
+        display: none;
+        position: absolute;
         background-color: rgba(0, 0, 255, 0.3); /* Azul com 30% de transparência */
-        list-style: none;            /* Remove bolinhas da lista */
+        list-style: none;
         padding: 0;
         margin: 5px 0 0 0;
-        border-radius: 6px;          /* Bordas arredondadas */
+        border-radius: 6px;
     }
 
     header nav.menu-pages .menu li:hover .submenu {
-        display: block;              /* Mostra o submenu ao passar o mouse */
+        display: block; /* Mostra o submenu ao passar o mouse */
     }
 
     header nav.menu-pages .menu li .submenu li a {
-        width: 120px;                /* Largura fixa */
-        height: 30px;                /* Altura fixa */
+        width: 120px; /* Largura fixa */
+        height: 30px; /* Altura fixa */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -149,56 +136,58 @@
         color: black;
     }
 
-    /*-------------------------------- Fim da Estilização do Submenu ------------------------------------------- */
-
     .hamburger {
         display: none;
     }
 
-    /*---------------------------------------------------Inicio do Main ---------------------------------------------------*/
+    /*---------------------------------------------------Início do Main---------------------------------------------------*/
     main {
-        display: flex; /* Ativa o modelo Flexbox */
-        /* align-items: center; /* Centraliza os itens verticalmente */
-        justify-content: space-between; /*Garante espaço entre os itens*/
-        /* width: 100%; O contêiner ocupa toda a largura */
-        /* height: 80vh; O contêiner ocupa toda a altura da tela */
-        /* padding: 0 5%; Adiciona espaçamento interno nas laterais */
-        /* box-sizing: border-box; Inclui padding no cálculo de largura */
-        /* flex-direction: row; Garante que a imagem fique à esquerda */
-        /* margin: 0; Remove margens adicionais */ */
-      }
+        display: flex; /* Deve vir antes das propriedades relacionadas ao flexbox */
+        flex-direction: row; /* Define a direção dos itens no flex container */
+        justify-content: flex-start; /* Alinha itens ao início do eixo principal */
+        align-items: center; /* Centraliza os itens no eixo transversal */
+        width: 100%;
+        position: relative;
+        background-image: url('../images/background.jpg');
+        background-size: cover;
+        background-position: center -65vh;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
 
-      main div.img_principal_home {
-        width: 50vw; /* Define a largura */
-        height: -10rem; /* Define a altura desejada para cortar a imagem */
-        overflow: hidden; /* Esconde o conteúdo que ultrapassa os limites */
-        position: relative; /* Garante que o conteúdo da imagem seja controlado */
-      }
-    
-    
-    
-      main div.img_principal_home img {
-        width: 100%; /* Garante que a imagem ocupe a largura do contêiner */
-        height: auto; /* Mantém a proporção da imagem */
-        display: block;
-        /* position: absolute; Permite ajustar o posicionamento da imagem */
-        position:relative;
-        top: -11rem; /* entrou a imagem dentro da header */
-        /* left: 0; Alinha a parte esquerda da imagem ao contêiner */
-      }
+    main .img_principal_home img {
+        width: 50vw;
+        height: auto;
+        object-fit: cover;
+        clip-path: inset(21.6vh 0 0 0);
+        position: relative;
+        top: -21.6vh;
+    }
 
     main div.shadowbox {
-        width: 50%;
-        padding: 5rem;
-        background-color: white;
+        position: relative;
+        width: 90%;
+        background-color: rgba(255, 255, 255, 0.4);
         box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.2);
-        text-align: justify;
+        padding: 8px 8px;
+        margin: 5rem;
         font-size: 16pt;
-        line-height: 40pt; /* Define o espaçamento entre as linhas */
-        z-index: -1000;
+        justify-content: center;
     }
-      
 
+    main div.shadowbox h1 {
+        color: var(--headline-color-on-white);
+        font-size: 2rem;
+        text-align: left;
+        margin-left: 2rem;
+    }
 
+    main div.shadowbox p.presentation {
+        color: var(--headline-color-on-white);
+        text-align: justify;
+        padding: 0.5rem 2rem 1rem 2rem;
+        line-height: 40pt;
+    }
 
     /*--------------------------------------------------Fim do Main-------------------------------------------------------*/
+}

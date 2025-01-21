@@ -47,7 +47,7 @@
         align-items: center; /*Alinha os itens no centro verticalmente */
         width: 100%;
         height: auto;
-        border-bottom: 6px solid #5D7CA6;
+        border-bottom: 9px solid #5D7CA6;
         padding: 10px;
     }
 
@@ -59,9 +59,9 @@
     }
 
     header nav.menu-pages .logo img {
-        margin-left: 3rem;
-        margin-right: 2rem; /* Adiciona distância entre a logo e o menu */
-        width: 80px;
+        margin-left: 6rem;
+        margin-right: 6rem; /* Adiciona distância entre a logo e o menu */
+        width: 100px;
         height: auto;
 
     }
@@ -73,15 +73,15 @@
         align-items: center;        /* Centraliza o conteúdo verticalmente */
         margin: 0;                /* Remove o espaço extra da lista */
         padding: 0;               /* Remove o padding da lista */
-        gap: 12px;                  /* Espaço de 15px entre os itens */
+        gap: 11px;                  /* Espaço de 11px entre os itens */
         
     }
 
     header nav.menu-pages .menu li a{
         background-color: var(--primary-color);
         color: #FFFFFF;
-        width: 105px;               /* Largura de 170px para cada item */
-        height: 30px;               /* Altura de 30px para cada item */
+        width: 105px;               /* Largura de 105px para cada item */
+        height: 25px;               /* Altura de 30px para cada item */
         padding: 5px 10px;          /* Adiciona padding para espaçamento interno dos itens */
         border: 0.05px solid white; /* Contorno de borda com espessura de 0.05px */
         border-radius: 6px;         /* Bordas arredondadas com raio de 6px */
@@ -92,6 +92,13 @@
         text-decoration: none;      /*Remove os sublinhados*/
     }
 
+    header nav.menu-pages .menu li a:hover {
+        background-color: var(--primary-color);
+        color: var(--accent1-color);
+        border: 1.5px solid white;
+    }
+
+
     header nav.menu-pages .menu li a.corretores {
         background-color: red;
 
@@ -99,6 +106,7 @@
 
     header nav.menu-pages .menu li a.corretores:hover {
         background-color: var(--accent1-color);
+        border: 1.5px solid white;
         color: black;
     }
 
@@ -109,7 +117,7 @@
         background-color: rgba(0, 0, 255, 0.3); /* Azul com 30% de transparência */
         list-style: none;            /* Remove bolinhas da lista */
         padding: 0;
-        margin: 5px 0 0 0;
+        margin: 4px 0 0 0;
         border-radius: 6px;          /* Bordas arredondadas */
     }
 
@@ -118,8 +126,8 @@
     }
                 /*<<<<<<<<<<<Responsavel pela cor das tags de navegação principais>>>>>>>>>>>>*/
     header nav.menu-pages .menu li .submenu li a {
-        width: 120px;                /* Largura fixa */
-        height: 30px;                /* Altura fixa */
+        width: 90px;                /* Largura fixa */
+        height: 20px;                /* Altura fixa */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -129,20 +137,6 @@
         border-radius: 6px;
     }
 
-    header nav.menu-pages .menu li a:hover {
-        background-color: var(--primary-color);
-        color: var(--accent1-color);
-        width: 120px;               /* Largura de 170px para cada item */
-        height: 30px;               /* Altura de 30px para cada item */
-        padding: 5px 10px;          /* Adiciona padding para espaçamento interno dos itens */
-        border: 3px solid white; /* Contorno de borda com espessura de 0.05px */
-        border-radius: 6px;         /* Bordas arredondadas com raio de 6px */
-        display: flex;              /* Garante que os itens fiquem em linha */
-        justify-content: center;    /* Centraliza o conteúdo horizontalmente */
-        align-items: center;        /* Centraliza o conteúdo verticalmente */
-        box-shadow: #4B4B4B;
-        text-decoration: none;      /*Remove os sublinhados*/
-    }
 
     /*<<<<<<<<<<<Responsavel pela cor das tags de navegação pricipais>>>>>>>>>>>>*/
 
@@ -158,53 +152,67 @@
     }
 
     /*---------------------------------------------------Inicio do Main ---------------------------------------------------*/
-    /* main div.img_principal_home img {
+    main {
+        display: flex; /* Deve vir antes das propriedades relacionadas ao flexbox */
+        flex-direction: row; /* Define a direção dos itens no flex container */
+        justify-content: flex-start; /* Alinha itens ao início do eixo principal */
+        align-items: center; /* Centraliza os itens no eixo transversal */
+        
+        width: 100%; /* Define o tamanho */
+        position: relative; /* Define o contexto para posicionamento */
+        
+        background-image: url('../images/background.jpg'); /* Configurações de fundo */
+        background-size: cover; /* Faz o fundo cobrir todo o espaço */
+        background-position: center -65vh; /* Reposiciona o fundo subindo 150px */
+        background-repeat: no-repeat ;
+        z-index: -1;
+    }
+    
+    
+      main .img_principal_home img {
         width: 50vw;
         height: auto;
-    } */
-
-    main {
-        display: flex; /* Ativa o modelo Flexbox */
-        /* align-items: center; /* Centraliza os itens verticalmente */
-        justify-content: space-between; /*Garante espaço entre os itens*/
-        /* width: 100%; O contêiner ocupa toda a largura */
-        /* height: 80vh; O contêiner ocupa toda a altura da tela */
-        /* padding: 0 5%; Adiciona espaçamento interno nas laterais */
-        /* box-sizing: border-box; Inclui padding no cálculo de largura */
-        /* flex-direction: row; Garante que a imagem fique à esquerda */
-        /* margin: 0; Remove margens adicionais */ */
-      }
-
-      main div.img_principal_home {
-        width: 50vw; /* Define a largura */
-        height: -5rem; /* Define a altura desejada para cortar a imagem */
-        overflow: hidden; /* Esconde o conteúdo que ultrapassa os limites */
-        position: relative; /* Garante que o conteúdo da imagem seja controlado */
-      }
-    
-    
-    
-      main div.img_principal_home img {
-        width: 100%; /* Garante que a imagem ocupe a largura do contêiner */
-        height: auto; /* Mantém a proporção da imagem */
-        display: block;
-        /* position: absolute; Permite ajustar o posicionamento da imagem */
-        position:relative;
-        top: -5.5rem; /* entrou a imagem dentro da header */
-        /* left: 0; Alinha a parte esquerda da imagem ao contêiner */
-      }
-
-    main div.shadowbox {
-        width: 50%;
-        padding: 2.5rem;
-        background-color: white;
-        box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.2);
-        text-align: justify;
-        font-size: 12pt;
-        line-height: 30pt; /* Define o espaçamento entre as linhas */
-        z-index: -1000;
+        object-fit: cover; /* Faz a imagem preencher o espaço sem distorção */
+        clip-path: inset(15vh 0 0 0); /* faz um corte na imagem de 150px no topo*/
+        position: relative;
+        top: -15vh; /*sobe a imagem para compensar o corte feito*/
     }
+    
+      main div.shadowbox {
+        position: relative;
+        width: 90%;
+        background-color: rgba(255, 255, 255, 0.4);  
+        box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.2); 
+        padding: 4px 4px;
+        margin: 2rem;
+        font-size: 1rem;
+        justify-content: center;
+      }
 
+      /* main div.shadowbox {
+        position: relative;
+        width: 90%;
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 10px 8px 15px 15px rgba(0, 0, 0, 0.2);
+      } */
+    
+      main div.shadowbox h1 {
+        
+        color:var(--headline-color-on-white);
+        font-size: 2rem;
+        text-align: left;
+        margin-left: 2rem;
+        top: 25px;
+      }
+    
+      main div.shadowbox p.presentation {
+        color: var(--headline-color-on-white);
+        text-align: justify;
+        padding: 0.5rem 2rem 1rem 2rem;
+        line-height: 30pt;
+      }
+
+      
 
 
 
