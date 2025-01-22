@@ -217,5 +217,28 @@
 
 
     /*--------------------------------------------------Fim do Main-------------------------------------------------------*/
+    
+
+    /*--------------------------------------------------inicio do ----Footer---------------------------------------------------*/
+footer {
+    display: flex;
+    top: -15.4vh;
+    width: 100%;
+    background-color: var(--primary-color);
+    height: 20vh;
+    margin-bottom: 20px; 
+    padding: 20px;
+    border-top: 9px solid #5D7CA6;
+    position: relative;  /* Adicionando 'relative' no contêiner */
+
+}
+
+
+
+ /*--------------------------------------------------final do ----Footer---------------------------------------------------*/
+
+
+
+
 
 }
