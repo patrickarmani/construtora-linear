@@ -227,15 +227,9 @@ footer div.logo_footer {
     display: flex; /*Torna o logo um contêiner*/
     align-items: center; /* Centraliza a imagem verticalmente */
     /* justify-content: center; Opcional: centraliza horizontalmente se necessário */
-    justify-content: flex-start; /*Alinha
+    justify-content: flex-start; /*Alinha*/
 }
 
-footer div.logo_footer a img {
-    width: 135px;
-    height: auto;
-    margin-left: 12vw;
-    /* margin-right: 5vw; */
-}
 
 footer div.logo_footer a img {
     width: 100px;
@@ -312,6 +306,11 @@ footer .social-icons a {
      
  } 
 
+
+ /* CSS para o footer de telas maiores */
+.footer-small {
+    display: none; /* Esconde o footer para telas maiores que 767px */
+}
 
 
 

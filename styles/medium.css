@@ -184,7 +184,7 @@
         background-color: rgba(255, 255, 255, 0.4);  
         box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.2); 
         padding: 4px 4px;
-        margin: 2rem;
+        margin: 1rem;
         font-size: 1rem;
         justify-content: center;
       }
@@ -231,6 +231,105 @@ footer {
     border-top: 9px solid #5D7CA6;
     position: relative;  /* Adicionando 'relative' no contêiner */
 
+}
+
+/*--------------------------------------------------inicio do ----Footer---------------------------------------------------*/
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 12vh;
+    background-color: var(--primary-color);
+    border-top: 9px solid #5D7CA6;
+    position:relative;
+    padding: 0 10%;
+}
+
+footer div.logo_footer {
+    display: flex; /*Torna o logo um contêiner*/
+    align-items: center; /* Centraliza a imagem verticalmente */
+    /* justify-content: center; Opcional: centraliza horizontalmente se necessário */
+    justify-content: flex-start; /*Alinha*/
+}
+
+footer div.logo_footer a img {
+    width: 100px;
+    height: auto;
+    margin-left: 0; /* Mantém próximo à margem esquerda do `footer` */
+}
+
+
+footer div.maps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -5px; /* Espaçamento entre `logo_footer` e `maps` */
+}
+
+footer div.maps a img {
+    height: 40PX;
+    width: auto;
+}
+
+footer p.footertext {
+    flex: 1; /* Faz o texto ocupar o espaço restante */
+    display: block;
+    color: #FFFFFF;
+    font-family: var(--paragraph-font);
+    font-size: 0.6em;
+    text-align: justify;
+    line-height: 1.5;
+    margin-left: -2vw; /* Espaçamento entre `maps` e `footertext` */
+    column-count: 2; /* Define o número de colunas */
+    column-gap: 20px; /* Define o espaçamento entre as colunas */
+    
+}
+
+.footertext .highlight {
+    color: var(--accent3-color);
+    text-decoration: none; /* Opcional: Remove o sublinhado */
+}
+.footertext .highlight:hover {
+    text-decoration: underline; /* Opcional: Adiciona sublinhado ao passar o mouse */
+}
+
+footer .social-icons {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os ícones */
+    margin-right: 0; /* Alinha os ícones à direita */
+}
+
+footer .social-icons a img {
+    width: 30px; /* Largura dos ícones */
+    height: auto; /* Altura dos ícones */
+    object-fit: contain; /* Garante que as proporções sejam mantidas */
+    margin-right: 15%; /* Distância do lado direito */
+    z-index: 1000;
+}
+
+footer .social-icons a {
+    margin-right: 10%; /*Distância da borda direita*/
+}
+
+.maps {
+    display: flex;
+    width: 30%;
+    height: auto;
+    margin-left: 4vw;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 1rem; /* Espaçamento entre os ícones */
+    /* width: 30%; */
+    /* height: auto; */
+     
+ } 
+
+ /* CSS para o footer de telas maiores */
+.footer-small {
+    display: none; /* Esconde o footer para telas maiores que 767px */
 }
 
 
