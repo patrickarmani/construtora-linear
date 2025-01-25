@@ -310,6 +310,12 @@ footer .maps img {
 footer .footertext {
     font-size: 0.8rem; /* Reduzir o tamanho do texto */
     margin-bottom: 15px;
+    color:#FFFFFF;
+}
+
+footer .footertext .highlight {
+    color: #5D7CA6;
+    text-decoration: none; /* Opcional: Remove o sublinhado */
 }
 
 footer .social-icons img {
