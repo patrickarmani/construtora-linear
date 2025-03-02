@@ -293,7 +293,7 @@ footer.large-footer p.footertext{
 }
 
 p.pfooter {
-    color: #FFFFF;
+    color: var(--headline-color-on-color);
 }
 
 footer.large-footer div.footertext p.pfooter {
