@@ -4,7 +4,7 @@
     --secondary-color: #B0B0B0;
     --accent1-color: #00CED1;
     --accent2-color: #FFA500;
-    --accent3-color: #98FB98;
+    --accent3-color: #9CA67B;
     --accent4-color:#650A0B;
     --accent5-color:#063970;
     --site-plan-background-logo: #FFFFFF;
@@ -393,6 +393,12 @@ footer.footer-small div.smallsocial-icons a img:hover {
     transform: scale(1.2); /* Aumenta ligeiramente o tamanho */
     transition: transform 0.3s ease-in-out;
     filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+a {
+    font-family: var(--paragraph-font);
+    color:#FFFFFF;
+    text-decoration: none;
 }
 
 /* -----------------------------------------------------------pagina em posição paisagem-----------------------------------------*/

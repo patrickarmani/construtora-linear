@@ -5,7 +5,7 @@
         --secondary-color: #B0B0B0;
         --accent1-color: #00CED1;
         --accent2-color: #FFA500;
-        --accent3-color: #98FB98;
+        --accent3-color: #9CA67B;
         --accent4-color:#650A0B;
         --accent5-color:#063970;
         --site-plan-background-logo: #FFFFFF;
@@ -141,7 +141,7 @@
         text-decoration: none;
         border: 0.0625rem solid var(--accent3-color); /* Bordas ajustadas com rem */
         border-radius: 0.275rem;      /* Bordas arredondadas com rem */
-        gap:3rem;
+        margin-bottom: 0.5rem;
 }
 
 
@@ -230,6 +230,7 @@ footer.footer-small {
     }
 
 footer.large-footer {
+    color: var(--headline-color-on-color); /* Cor do texto */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -285,7 +286,7 @@ footer.large-footer p.footertext{
     font-size: 0.8rem;
     text-align: justify;
     line-height: 1.5;
-    left: 0; /* Espaçamento entre `maps` e `footertext` */
+    left: -2rem; /* Espaçamento entre `maps` e `footertext` */
     column-count: 2;/* Define o número de colunas*/
     column-gap: 0.5rem; /*Define o espaçamento entre as colunas */
     text-decoration: none; /* Opcional: Remove o sublinhado */
@@ -360,6 +361,11 @@ footer.large-footer p.pfooter a.highlight {
     display: none; /* Esconde o footer para telas maiores que 767px */
 }
 
+a {
+    font-family: var(--paragraph-font);
+    color:#FFFFFF;
+    text-decoration: none;
+}
 
 
  /*--------------------------------------------------final do ----Footer---------------------------------------------------*/
