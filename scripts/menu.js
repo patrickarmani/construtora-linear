@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const corretores = document.querySelector(".corretores");
-    const submenu = document.querySelector(".submenu");
+    const corretores = document.querySelector("corretores");
+    const submenu = document.querySelector("submenu");
     let timeout;
 
     corretores.addEventListener("click", function(event) {

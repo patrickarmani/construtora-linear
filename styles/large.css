@@ -205,21 +205,16 @@
 
 /*--------------------------------------------------inicio do ----Footer---------------------------------------------------*/
 footer {
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* gap: 10px; */
     width: 100%;
     height: 12vh;
     background-color: var(--primary-color);
     border-top: 9px solid #5D7CA6;
     position:relative;
     padding: 0 10%;
-    /* top: -23.5vh;
-   
-    
-    margin-bottom: 20px;  */
-
 
 }
 
@@ -249,10 +244,11 @@ footer div.maps a img {
     width: auto;
 }
 
-footer p.footertext {
+
+
+footer div.footertext {
     flex: 1; /* Faz o texto ocupar o espaço restante */
     display: block;
-    color: #FFFFFF;
     font-family: var(--paragraph-font);
     font-size: 1em;
     text-align: justify;
@@ -262,15 +258,22 @@ footer p.footertext {
     /* Adicionado para dividir em duas colunas */
     column-count: 2; /* Define o número de colunas */
     column-gap: 20px; /* Define o espaçamento entre as colunas */
+    text-decoration: none; /* Opcional: Remove o sublinhado */
     
 }
 
-.footertext .highlight {
+footer p.pfooter{
+    color:#FFFFFF;
+    text-decoration: none; /* Opcional: Remove o sublinhado */
+}
+}
+footer p.highlight {
     color: #5D7CA6;
     text-decoration: none; /* Opcional: Remove o sublinhado */
 }
-.footertext .highlight:hover {
-    text-decoration: underline; /* Opcional: Adiciona sublinhado ao passar o mouse */
+footer p.highlight:hover {
+    color: #FFA500;
+   
 }
 
 footer .social-icons {
@@ -307,9 +310,13 @@ footer .social-icons a {
  } 
 
 
- /* CSS para o footer de telas maiores */
+ .large-footer {
+    display: block;
+}
+
+
 .footer-small {
-    display: none; /* Esconde o footer para telas maiores que 767px */
+    display: none;
 }
 
 
@@ -322,10 +329,3 @@ footer .social-icons a {
 
 /*--------------------------------------------------fim do ----Footer---------------------------------------------------*/
 
-
-
-
-
-
-
-}
