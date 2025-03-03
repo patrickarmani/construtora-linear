@@ -1,12 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="author" content="Patrick Marcman">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empreendimento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, orientation=landscape">
+    <title>Home</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/s_empreend.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="styles/medium.css" media="(min-width: 601px)">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 1024px)">
+    <!-- link para o Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>EM CONSTRUÇÃO</h1>
     
+
+<body>
+    <header>
+        
+
+        <nav class="menu-pages">
+            <div class="logo">
+                <a href="index.html">
+                    <!-- <img src="../images/logo_linear_br.png" alt="Logo da Construtora Linear"> -->
+                    <img src="https://patrickarmani.github.io/construtora-linear/images/logo_linear_br.png" alt="logo da construtora linear">
+
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Linear desde 1981</a></li>
+                <li><a href="empreendimentos.html">Empreendimentos</a></li>
+                <li><a href="#">Portifólio</a></li>
+                <li class="corretores"><a href="#">Nossos Corretores</a>
+                    <ul class="submenu">
+                        <li><a href="https://wa.me/553196656945?text=Olá%20Tião!%20Tenho%20interesse%20no%20empreendimento%20Leonardo%20da%20Vinci!">Tião/zap</a></li>
+                        <li><a href="https://wa.me/553196656945?text=Olá%20Afonso!%20Tenho%20interesse%20no%20empreendimento%20Leonardo%20da%20Vinci!">Afonso/zap</a></li>
+                        
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <!--Icone do menu sanduiche para ser visto em celulares-->
+        <!-- <div class="menu-toggle" onclick="toggleMenu()"> -->
+            <!-- <div></div>linha 1 do sanduiche -->
+            <!-- <div></div>linha 2 do sanduiche -->
+            <!-- <div></div>linha 3 do sanduiche -->
+        <!-- </div> -->
+        </nav>
+        
+
+    </header>
+    <main>
+        
+        <!-- <div  class="img_fundo_vitruvius">
+            <img src="/images/sm_vitruviano2.webp" width="1024px" alt="homem vituviano">
+             
+        </div> -->
+        <div class="titulo">
+            <!-- Título principal do site -->
+            <h1>Empreendimentos em BH</h1>          
+        </div>
+        <div class="imagens-container"></div>
+            <div class="carousel-container">
+                <img src="/images/foto01.png" weight="450" height="400" alt="Edificio Leonardo da Vinci Frente">
+                <img src="/images/foto02.png" weight="450" height="400" alt="Edificio Leonardo da Vinci Piscina">
+                <img src="/images/foto03.png" weight="450" height="400" alt="Edificio Leonardo da Vinci Piscina 2">
+        </div>
+        
+
+    </main>
+    
+
+    <footer class="large-footer">
+
+        <div class="logo_footer">
+            <a href="index.html">
+                <!-- <img src="../images/logo_linear_br.png" alt="Logo da Construtora Linear"> -->
+                <img src="https://patrickarmani.github.io/construtora-linear/images/logo_linear_br.png" alt="logo da construtora linear">
+
+            </a>
+        </div>
+
+        <div class="maps">
+            <!-- <a href="https://maps.app.goo.gl/fDx67S2qsWk7s8f4A"><img src="images/localizar.png" alt="icone de localização"></a> -->
+            <a href="https://maps.app.goo.gl/fDx67S2qsWk7s8f4A"><img src="https://patrickarmani.github.io/construtora-linear/images/localizar.png" alt="icone de localização">
+            
+        </div>
+        <!-- Rodapé do site com informações de contato -->
+        <div class="footertext">
+            <p class="pfooter">
+            
+                Rua Padre Marinho 218, Santa Efigênia,<br>
+                Belo Horizonte / MG / CEP: 30.140-040<br>
+            </p>
+            <p class="pfooter">
+                email: <a href="mailto:construtoralinear@hotmail.com" class="highlight" > construtoralinear@hotmail.com</a> <br> 
+        
+                fone: <a href="tel:+55313241-4477" class="highlight" >31 3241-4477</a>
+                &copy; <span id="year"></span>
+            </p>
+            <!-- <script>
+                document.getElementById("year").textContent = new Date().getFullYear();
+            </script> -->
+            
+
+        </div>
+
+        <div class="social-icons">
+            <!-- <a href="https://pt-br.facebook.com/"><img src="images/facebook.png" alt="logomarca do facebook"></a>
+            <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="logomarca do instagram"></a>
+            <a href="https://www.linkedin.com/"><img src="images/linkedin.png" alt="logomarca do linkedin"></a> -->
+
+            <a href="https://pt-br.facebook.com/"><img src="https://patrickarmani.github.io/construtora-linear/images/facebook.png" alt="logomarca do facebook"></a>
+            <a href="https://www.instagram.com/"><img src="https://patrickarmani.github.io/construtora-linear/images/instagram.png" alt="logomarca do instagram"></a>
+            <a href="https://www.linkedin.com/"><img src="https://patrickarmani.github.io/construtora-linear/images/linkedin.png" alt="logomarca do linkedin"></a>
+            
+        
+        </div>
+
+
+    </footer>
+
+    <footer class="footer-small">
+        <!-- Este é o footer para telas menores -->
+        <div class="smallContainer">
+            <div class="smallLogoFooter">
+                <a href="index.html">
+                    <!-- <img src="../images/logo_linear_br.png" alt="Logo da Construtora Linear"> -->
+                    <img src="https://patrickarmani.github.io/construtora-linear/images/logo_linear_br.png" alt="logo da construtora linear">
+
+                </a>
+            </div>
+            <div class="smallMaps">
+                <!-- <a href="https://maps.app.goo.gl/fDx67S2qsWk7s8f4A"><img src="images/localizar.png" alt="icone de localização"></a> -->
+                <a href="https://maps.app.goo.gl/fDx67S2qsWk7s8f4A"><img src="https://patrickarmani.github.io/construtora-linear/images/localizar.png" alt="icone de localização">
+                </a>
+            </div>
+            <!-- Rodapé do site com informações de contato -->
+            <p class="smallfootertext">
+                Rua Padre Marinho 218, Santa Efigênia,<br>
+                Belo Horizonte / MG / CEP: 30.140-040<br>
+                email: <a href="mailto:construtoralinear@hotmail.com" class="highlight">construtoralinear@hotmail.com</a><br>
+                fone: <a href="tel:+55313241-4477" class="highlight">31 3241-4477</a>
+                &copy; <span id="year"></span>
+                <!-- <script>
+                    document.getElementById("year").textContent = new Date().getFullYear();
+                </script> -->
+            </p>
+        </div>
+        <div class="smallsocial-icons">
+            <!-- <a href="https://pt-br.facebook.com/"><img src="images/facebook.png" alt="logomarca do facebook"></a>
+            <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="logomarca do instagram"></a>
+            <a href="https://www.linkedin.com/"><img src="images/linkedin.png" alt="logomarca do linkedin"></a> -->
+
+            <a href="https://pt-br.facebook.com/"><img src="https://patrickarmani.github.io/construtora-linear/images/facebook.png" alt="logomarca do facebook"></a>
+            <a href="https://www.instagram.com/"><img src="https://patrickarmani.github.io/construtora-linear/images/instagram.png" alt="logomarca do instagram"></a>
+            <a href="https://www.linkedin.com/"><img src="https://patrickarmani.github.io/construtora-linear/images/linkedin.png" alt="logomarca do linkedin"></a>
+            
+        </div>
+    </footer>
+
+
+
+    <!--Script referente ao submeu com nomes e telefones dos corretores-->
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/footer.js"></script>
+    <!--Script referente ao menu saunduiche-->
+    <script src="scripts/hamburger_menu.js"></script>
+    <script src="scripts/open_menu_hamb.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
+
 </html>

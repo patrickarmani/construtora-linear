@@ -44,7 +44,8 @@
 
     /*--------------------------------------------------start header----------------------------------------------------*/
     header {
-        background-color: #4a4848;
+        /* background-color: #4a4848; */
+        background-color: #898B88;
         display: flex; /*ele vai alinhar os elementos filhos dentro do header.*/
         justify-content: space-between; /*Espaço igual entre os itens */ 
         align-items: center; /*Alinha os itens no centro verticalmente */
@@ -238,7 +239,8 @@ footer.large-footer {
     bottom: 0;
     /* top: -15.4vh; */
     width: 100%;
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
+    background-color: #898B88;
     height: 30vh;
     /* margin-bottom: 20px;  */
     /* padding: 0rem; */
