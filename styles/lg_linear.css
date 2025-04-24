@@ -35,6 +35,11 @@
 
     body {
         font-size: 1rem;
+        /*novos itens*/
+        min-height:100vh;
+        display:flex;
+        flex-direction:column;
+        /*fim dos novos itens*/
     }
 
     h1, h2, h3, h4 {
@@ -50,7 +55,13 @@
         width: 100%;
         height: auto;
         border-bottom: 9px solid #5D7CA6;
-        padding: 20px;
+        /* velho padding: 20px; */
+        /*novos itens*/
+        padding:.75rem 2rem;
+        display:flex;
+        align-items:center;
+        gap:2rem;
+        z-index:10;
     }
 
     header nav.menu-pages {
@@ -150,60 +161,104 @@
     }
 
     /*---------------------------------------------------Início do Main---------------------------------------------------*/
-    main {
+    /* main {
         display: flex; /* Torna o main um contêiner flex */
-        flex-direction: row; /* Define a direção dos itens no flex container */
-        justify-content: flex-start; /* Alinha itens ao início do eixo principal */
+        /*flex-direction: row;  Define a direção dos itens no flex container */
+        /*justify-content: flex-start; /* Alinha itens ao início do eixo principal */
 
-        width: 100%; /* Define o tamanho */
-        position: relative; /* Define o contexto para posicionamento */
+        /*width: 100%; /* Define o tamanho */
+        /*osition: relative; /* Define o contexto para posicionamento */
         
+        /*background-image: url('../images/familia_feliz4.jpg'); /* Configurações de fundo */
+        /*background-size: cover; /* Faz o fundo cobrir todo o espaço */
+        /*background-position: center 0vh; /* Reposiciona o fundo subindo 65% */
+        /*background-repeat: no-repeat ;
+        z-index: -1;
+    } */
+    main {
+        position:relative;
+        flex:1;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        overflow:hidden;
         background-image: url('../images/familia_feliz4.jpg'); /* Configurações de fundo */
         background-size: cover; /* Faz o fundo cobrir todo o espaço */
-        background-position: center 0vh; /* Reposiciona o fundo subindo 65% */
-        background-repeat: no-repeat ;
-        z-index: -1;
-    }
-    
-
-    main div.img_principal_home img {
-        width: 52vw;
-        height: 90vh;
-        object-fit: cover; /* Faz a imagem preencher o espaço sem distorção */
-        /* clip-path: inset(15vh 0 0 0); faz um corte na imagem de 150px no topo */
-        position: relative;
-        /* top: -15vh; sobe a imagem para compensar o corte feito */
+        width: 100%; /* Define o tamanho */
     }
 
-    main div.shadowbox {
-        position: relative;
-        width: 90%;
-        background-color: rgba(255, 255, 255, 0.4);  
-        box-shadow: 8px 8px 6px rgba(0, 0, 0, 0.2); 
-        padding: 1rem;
-        margin-top: 1rem;
-        font-size: 1rem;
-        justify-content: center;
+    main::before {
+        content:"";
+        position:absolute;
+        inset:0;
+        background:url('wireframe_acab_linear2_pl2.jpg') center/cover no-repeat;
+        filter:brightness(.6);
+        z-index:-1
     }
 
-    main div.shadowbox h1 {
-        color:var(--headline-color-on-white);
+
+   /* HEADLINE */
+   .headline {
+        position:absolute;
+        top:-2rem;
+        left:5rem;
+        padding:2rem 0;
         font-family: var(--heading-font);
-        font-size: 4rem;
-        text-align: left;
-        margin-left: 2rem;
-        margin-top: 9rem;
-        text-align: center;
+        font-size:3rem;
+        font-weight:300;
+        color:var(--headline-color-on-color)
     }
 
-    main div.shadowbox p.presentation {
-        color: var(--headline-color-on-white);
-        text-align: justify;
-        padding: 0 2rem 0 1rem;
-        font-family: var(--paragraph-font);
-        font-size: 1.4rem;
-        line-height: 2;
+    /* CARD BASE */
+    .card {
+        width:400px;
+        height:300px;
+        border-radius:6px;
+        padding:3rem;
+        background:var(--nav-background-color);
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        gap:1rem;
+        position:absolute;
+        cursor:pointer;
+        transition:transform .3s,ease .3s;
     }
+    .card h3 {
+        margin:0;
+        font-size:1.75rem
+    }
+    .card p {
+        line-height:1.4;
+        font-size:1rem
+    }
+
+    /* left stack */
+    .card-left-top {
+        top:150px;
+        left:150px;
+        z-index:2;
+        background:var(--nav-background-color);
+        color:#fff;
+    }
+    .card-left-bottom {
+        top:150px;
+        left:180px;
+        background:#ffffffb3;
+        color:var(--nav-background-color);
+    }
+
+    /* title ribbons */
+    .ribbon{height:48px;width:200px;background:#0b0d15;display:flex;align-items:center;padding-left:1rem;border-top-left-radius:6px;border-top-right-radius:6px;font-size:1.5rem}
+    .card-left-bottom .ribbon{margin-left:auto;background:#ffffffb3;width:200px;justify-content:flex-end;padding-right:1rem}
+
+    /* right card */
+    .card-right{width:400px;height:250px;top:120px;right:150px;position:absolute;background:#0b0d15cc;display:flex;flex-direction:column;padding-top:3.5rem;}
+    .card-right .ribbon{position:absolute;top:0;left:0;width:150px;background:#0b0d15;}
+    
+    /* bring to front on click */
+    .on-top{z-index:3 !important;transform:translate(-30px,-30px);}
+
 
     /*--------------------------------------------------Fim do Main-------------------------------------------------------*/
 
