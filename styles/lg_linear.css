@@ -1,0 +1,340 @@
+@media screen and (min-width: 1024px) {
+    :root {
+        /* Cores escolhidas para a paleta */
+        --primary-color: #4B4B4B;
+        --secondary-color: #B0B0B0;
+        --accent1-color: #00CED1;
+        --accent2-color: #FFA500;
+        --accent3-color: #9CA67B;
+        --accent4-color:#650A0B;
+        --accent5-color:#063970;
+        --site-plan-background-logo: #FFFFFF;
+    
+        /* Cores escolhidas de acordo com a paleta */
+        --headline-color-on-white: #4B4B4B;
+        --headline-color-on-color: #FFFFFF;
+        --paragraph-color-on-white: #4B4B4B;
+        --paragraph-color-on-color: #B0B0B0;
+        --paragraph-background-color: #FFFFFF;
+        --nav-link-color: #00CED1;
+        --nav-background-color: #4B4B4B;
+        --nav-hover-link-color: #FFA500;
+        --nav-hover-background-color: #B0B0B0;
+    
+        /* Fontes selecionadas */
+        --heading-font: 'Spartan', Arial, Helvetica, sans-serif;
+        --paragraph-font: 'Oswald', Arial, Helvetica, sans-serif;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: var(--paragraph-font);
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    h1, h2, h3, h4 {
+        font-family: var(--heading-font);
+    }
+
+    /*--------------------------------------------------start header----------------------------------------------------*/
+    header {
+        background-color: #4a4848;
+        display: flex; /* Alinha os elementos filhos dentro do header */
+        justify-content: space-between; /* Espaço igual entre os itens */
+        align-items: center; /* Alinha os itens no centro verticalmente */
+        width: 100%;
+        height: auto;
+        border-bottom: 9px solid #5D7CA6;
+        padding: 20px;
+    }
+
+    header nav.menu-pages {
+        display: flex; /* Alinha os elementos filhos dentro do header */
+        justify-content: space-between; /* Espaço igual entre os itens */
+    }
+
+    header nav.menu-pages div.logo img {
+        margin-left: 12rem;
+        margin-right: 12rem; /* Adiciona distância entre a logo e o menu */
+        width: 120px;
+        height: auto;
+    }
+
+    header nav.menu-pages ul.menu {
+        display: flex; /* Exibe os itens na horizontal */
+        justify-content: space-between; /* Espaço igual entre os itens */
+        list-style: none; /* Remove os bollets das listas */
+        align-items: center; /* Centraliza o conteúdo verticalmente */
+        margin: 0;
+        padding: 0;
+        gap: 1rem; /* Espaço de 15px entre os itens */
+    }
+
+    header nav.menu-pages ul.menu li a {
+        background-color: var(--primary-color);
+        color: #FFFFFF;
+        width: 170px; /* Largura de 170px para cada item */
+        height: 30px; /* Altura de 30px para cada item */
+        padding: 5px 10px; /* Adiciona padding para espaçamento interno dos itens */
+        border: 0.05px solid white; /* Contorno de borda com espessura de 0.05px */
+        border-radius: 6px; /* Bordas arredondadas com raio de 6px */
+        display: flex; /* Garante que os itens fiquem em linha */
+        justify-content: center; /* Centraliza o conteúdo horizontalmente */
+        align-items: center; /* Centraliza o conteúdo verticalmente */
+        box-shadow: #4B4B4B;
+        text-decoration: none; /* Remove os sublinhados */
+    }
+
+    header nav.menu-pages ul.menu li a:hover {
+        background-color: var(--primary-color);
+        color: var(--accent1-color);
+        border: 3px solid white;
+    }
+
+    header nav.menu-pages ul.menu li.corretores a {
+        background-color: var(--accent4-color);
+    }
+
+    header nav.menu-pages ul.menu li.corretores:hover a {
+        background-color: var(--accent1-color);
+        border: 3px solid white;
+        color: black;
+    }
+
+    /* Estilização do Submenu */
+    header nav.menu-pages ul.menu li ul.submenu {
+        display: none;
+        position: absolute;
+        background-color: rgba(6, 57, 112, 0.7); /* 70% de transparência */
+        list-style: none;
+        padding: 0.5rem;
+        gap: 1rem;
+        margin: 0.3125rem 0 0.3125rem 0;
+        border-radius: 0.375rem;
+    }
+
+    header nav.menu-pages ul.menu li.corretores:hover ul.submenu {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        display: block; /*Mostra o submenu ao passar o mouse*/
+    }
+
+    header nav.menu-pages ul.menu li.corretores ul.submenu li a {
+        width: 5rem;  /* Largura fixa */
+        height: 2rem;            /* Altura em rem para proporção com a largura */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        border: 0.0625rem solid var(--accent3-color); /* Bordas ajustadas com rem */
+        border-radius: 0.275rem;      /* Bordas arredondadas com rem */
+        margin-bottom: 0.5rem;
+    }
+
+    /*<<<<<<<<<<<Responsavel pela cor das tags de navegação pricipais>>>>>>>>>>>>*/
+
+    header nav.menu-pages ul.menu li.corretores ul.submenu li a:hover {
+        background-color: var(--accent2-color); /* Muda a cor ao passar o mouse */
+        color: black;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    /*---------------------------------------------------Início do Main---------------------------------------------------*/
+    main {
+        display: flex; /* Torna o main um contêiner flex */
+        flex-direction: row; /* Define a direção dos itens no flex container */
+        justify-content: flex-start; /* Alinha itens ao início do eixo principal */
+
+        width: 100%; /* Define o tamanho */
+        position: relative; /* Define o contexto para posicionamento */
+        
+        background-image: url('../images/familia_feliz4.jpg'); /* Configurações de fundo */
+        background-size: cover; /* Faz o fundo cobrir todo o espaço */
+        background-position: center 0vh; /* Reposiciona o fundo subindo 65% */
+        background-repeat: no-repeat ;
+        z-index: -1;
+    }
+    
+
+    main div.img_principal_home img {
+        width: 52vw;
+        height: 90vh;
+        object-fit: cover; /* Faz a imagem preencher o espaço sem distorção */
+        /* clip-path: inset(15vh 0 0 0); faz um corte na imagem de 150px no topo */
+        position: relative;
+        /* top: -15vh; sobe a imagem para compensar o corte feito */
+    }
+
+    main div.shadowbox {
+        position: relative;
+        width: 90%;
+        background-color: rgba(255, 255, 255, 0.4);  
+        box-shadow: 8px 8px 6px rgba(0, 0, 0, 0.2); 
+        padding: 1rem;
+        margin-top: 1rem;
+        font-size: 1rem;
+        justify-content: center;
+    }
+
+    main div.shadowbox h1 {
+        color:var(--headline-color-on-white);
+        font-family: var(--heading-font);
+        font-size: 4rem;
+        text-align: left;
+        margin-left: 2rem;
+        margin-top: 9rem;
+        text-align: center;
+    }
+
+    main div.shadowbox p.presentation {
+        color: var(--headline-color-on-white);
+        text-align: justify;
+        padding: 0 2rem 0 1rem;
+        font-family: var(--paragraph-font);
+        font-size: 1.4rem;
+        line-height: 2;
+    }
+
+    /*--------------------------------------------------Fim do Main-------------------------------------------------------*/
+
+
+/*--------------------------------------------------inicio do ----Footer---------------------------------------------------*/
+
+footer.footer-small {
+    display: none;
+    }
+
+footer.large-footer {
+    color: var(--headline-color-on-color); /* Cor do texto */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 15vh;
+    background-color: var(--primary-color);
+    border-top: 9px solid #5D7CA6;
+    position: relative;
+    /* padding: 0 10%; */
+    text-decoration: none; /* Opcional: Remove o sublinhado */
+
+}
+
+footer div.logo_footer a img {
+    display: flex; /*Torna o logo um contêiner*/
+    align-items: center; /* Centraliza a imagem verticalmente */
+    /* justify-content: center; Opcional: centraliza horizontalmente se necessário */
+    justify-content: flex-start; /*Alinha*/
+}
+
+
+footer.large-footer div.logo_footer a img {
+    width: 120px;
+    height: auto;
+    margin-left: 2rem; /* Mantém próximo à margem esquerda do `footer` */
+}
+
+footer.large-footer div.maps img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 3rem; /* Espaçamento entre `logo_footer` e `maps` */
+    width: 30%;
+    height: auto;
+}
+
+/* footer div.maps a img {
+    height: 40PX;
+    width: auto;
+} */
+
+
+
+footer.large-footer div.footertext {
+    flex: 1; /*Faz o texto ocupar o espaço restante */
+    /*display: block; */
+    color: #FFFFFF;
+    font-family: var(--paragraph-font);
+    font-size: 0.5rem;
+    text-align: justify;
+    line-height: 1.5;
+    left: -2rem; /* Espaçamento entre `maps` e `footertext` */
+    column-count: 2;/* Define o número de colunas*/
+    column-gap: 0.5rem; /*Define o espaçamento entre as colunas */
+    text-decoration: none; /* Opcional: Remove o sublinhado */
+    
+}
+
+p.pfooter {
+    font-family: var(--paragraph-font);
+    color: var(--headline-color-on-color);
+}
+
+footer.large-footer div.footertext p.pfooter {
+    color: #FFFFFF;
+    top: 1rem;
+    text-decoration: none; /* Opcional: Remove o sublinhado */
+}
+
+
+footer.large-footer div.footertext p.pfooter a.highlight {
+    color: var(--accent3-color);
+    text-decoration: none; /* Opcional: Remove o sublinhado */
+}
+footer.large-footer div.footertext p.pfooter a.highlight:hover {
+    text-decoration: underline; /* Opcional: Adiciona sublinhado ao passar o mouse */
+}
+
+footer.large-footer div.social-icons a img {
+    display: flex;
+    width: 50px; /* Largura dos ícones */
+    height: auto; /* Altura dos ícones */
+    gap: 0.4rem; /* Espaçamento entre os ícones */
+    object-fit: contain; /* Garante que as proporções sejam mantidas */
+    margin-right: 2rem; /* Distância do lado direito */
+    z-index: 1000;
+}
+
+footer.large-footer div.social-icons {
+    display: flex;
+    gap: 2rem; /* Espaçamento entre os ícones */
+    /* width: 30%; */
+    /* height: auto; */
+     
+ } 
+
+
+footer.large-footer p.pfooter {
+    font-family: var(--paragraph-font);
+    font-size: 1.2rem; /* Reduzir o tamanho do texto */
+    text-align: left;
+    margin-right: 1rem; /*controlo o quão distante esta o texto do mapa e logo linerar do footer*/
+    margin-bottom: 1rem;
+    
+}
+
+footer.large-footer p.pfooter a.highlight {
+    color: var(--accent1-color);
+    text-decoration: none; /* Opcional: Remove o sublinhado */
+}
+ .large-footer {
+    display: block;
+}
+
+a {
+    font-family: var(--paragraph-font);
+    color:#FFFFFF;
+    text-decoration: none;
+}
+/*--------------------------------------------------fim do ----Footer---------------------------------------------------*/
+
