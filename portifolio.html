@@ -3,19 +3,50 @@
 <head>
     <meta name="author" content="Patrick Marcman">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, orientation=landscape">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <!-- <link rel="manifest" href="/site.webmanifest"> -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="styles/sm_empreend.css" media="(max-width: 600px)">
     <!-- <link rel="stylesheet" href="styles/medium.css" media="(min-width: 601px)"> -->
-    <link rel="stylesheet" href="styles/lg_empreend.css" media="(min-width: 1024px)">
+    <link rel="stylesheet" href="styles/lg_portifolio.css" media="(min-width: 1024px)">
     <!-- link para o Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        .video-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0; /* espaço acima e abaixo */
+          }
+          
+          .video-container {
+            width: 60vw; /* 60% da largura da tela */
+            aspect-ratio: 16/9; /* mantém proporção do vídeo */
+            background: white;
+            padding: 10px; /* moldura estilo polaroide */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4); /* sombra elegante */
+            border: 1px solid #ccc;
+            border-radius: 8px; /* opcional: cantos levemente arredondados */
+          }
+          
+          .video-container:hover {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+          }
+          
+          .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 4px; /* arredonda levemente o vídeo dentro da borda */
+          }
+          
+    </style>
 </head>
     
 
@@ -41,12 +72,12 @@
                 <li><a href="linear.html">Linear desde 1981</a></li>
                 <li><a href="empreendimentos.html">Empreendimentos</a></li>
                 <li><a href="portifolio.html">Portifólio</a></li>
-                <li class="corretores"><a href="corretores.html">Nossos Corretores</a>
+                <li class="corretores"><a href="#">Nossos Corretores</a>
                     <ul class="submenu">
-                        <li><a href="https://wa.me/553196656945?text=Olá%20Tião!%20Tenho%20interesse%20no%20empreendimento%20Leonardo%20da%20Vinci!">Sebastião/zap</a></li>
+                        <li><a href="https://wa.me/553196656945?text=Olá%20Sebastião!%20Tenho%20interesse%20no%20empreendimento%20Leonardo%20da%20Vinci!">Sebastião/zap</a></li>
                         <li><a href="https://wa.me/553196656945?text=Olá%20Afonso!%20Tenho%20interesse%20no%20empreendimento%20Leonardo%20da%20Vinci!">Afonso/zap</a></li>
                         
-                        </li>
+                        
                     </ul>
                 </li>
             </ul>
@@ -60,9 +91,22 @@
     <main>
         
         <section class="empreendimento">
-          <h1>EM CONSTRUÇÃO</h1>
+          <h1>Assista o Vídeo</h1>
+          <section class="video-section">
+            <!-- <div class="video-container"> -->
+                <video width="640" height="360" controls>
+                    <source src="/videos/portifolio.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo HTML5.
+                  </video>
+                  
+
+              <!-- </div> -->
+              
+            
+          </section>
+        
           
-      </main>
+      
 
     </main>
     
@@ -107,8 +151,8 @@
             <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="logomarca do instagram"></a>
             <a href="https://www.linkedin.com/"><img src="images/linkedin.png" alt="logomarca do linkedin"></a> -->
 
-            <a href="https://pt-br.facebook.com/"><img src="https://patrickarmani.github.io/construtora-linear/images/facebook.png" alt="logomarca do facebook"></a>
-            <a href="https://www.instagram.com/"><img src="https://patrickarmani.github.io/construtora-linear/images/instagram.png" alt="logomarca do instagram"></a>
+            <a href="https://www.facebook.com/share/1A44GhMBUp/?mibextid=wwXIfr"><img src="https://patrickarmani.github.io/construtora-linear/images/facebook.png" alt="logomarca do facebook"></a>
+            <a href="https://www.instagram.com/p/DGzAKAqM4IX/?igsh=MWU1cHllbWs2cmV1eQ=="><img src="https://patrickarmani.github.io/construtora-linear/images/instagram.png" alt="logomarca do instagram"></a>
             <a href="https://www.linkedin.com/"><img src="https://patrickarmani.github.io/construtora-linear/images/linkedin.png" alt="logomarca do linkedin"></a>
             
         

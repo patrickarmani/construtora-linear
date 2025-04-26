@@ -126,7 +126,7 @@
     }
 
     header nav.menu-pages ul.menu li.corretores ul.submenu li a {
-        width: 5rem;  /* Largura fixa */
+        width: 6rem;  /* Largura fixa */
         height: 2rem;            /* Altura em rem para proporção com a largura */
         display: flex;
         align-items: center;
