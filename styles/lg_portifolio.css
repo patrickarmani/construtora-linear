@@ -188,7 +188,7 @@
         display: none;
     }
 
-    .empreendimento {
+    /* .empreendimento {
 
         text-align: center;
         padding: 10px 10px;
@@ -201,7 +201,7 @@
         font-size: 2em;
         margin-bottom: 20px;
       }
-      
+       */
     .galeria {
         display: flex;
         flex-wrap: wrap;
@@ -256,10 +256,7 @@
     }
 }
   
-/* opcional: atraso incremental para efeito cascata */
-  .card:nth-child(1){ animation-delay:.1s }
-  .card:nth-child(2){ animation-delay:.25s }
-  .card:nth-child(3){ animation-delay:.4s }
+
   
       
 .ficha-btn {
