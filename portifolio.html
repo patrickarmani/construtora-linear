@@ -25,7 +25,8 @@
           }
           
           .video-container {
-            width: 60vw; /* 60% da largura da tela */
+            width: 90vw;
+            max-width: 960px;
             aspect-ratio: 16/9; /* mantém proporção do vídeo */
             background: white;
             padding: 10px; /* moldura estilo polaroide */
@@ -90,20 +91,20 @@
     
     <main>
         
-        <section class="empreendimento">
-          <h1>Assista o Vídeo</h1>
-          <section class="video-section">
-            <!-- <div class="video-container"> -->
-                <video width="840" height="460" controls>
-                    <source src="videos/portfolio.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeo HTML5.
-                  </video>
-                  
+        <section class="video-section">
+        <div class="video-container">
+            <iframe 
+            width="100%" 
+            height="100%" 
+            src="https://www.youtube.com/embed/6y42kjBbnsw" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+            </iframe>
+        </div>
+        </section>
 
-              <!-- </div> -->
-              
-            
-          </section>
         
           
       

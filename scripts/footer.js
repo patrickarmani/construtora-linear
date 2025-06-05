@@ -25,7 +25,7 @@
 // });
 
 document.addEventListener("scroll", function () {
-  let footer = document.querySelector("footer-small");
+  let footer = document.querySelector(".footer-small");
   let main = document.querySelector("main");
   let mainBottom = main.getBoundingClientRect().bottom;
   let windowHeight = window.innerHeight;
