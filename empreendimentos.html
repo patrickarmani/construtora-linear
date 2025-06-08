@@ -9,11 +9,17 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles/sm_empreend.css" media="(max-width: 600px)">
-    <!-- <link rel="stylesheet" href="styles/medium.css" media="(min-width: 601px)"> -->
+    <link rel="stylesheet" href="styles/m_empreend.css" media="(min-width: 601px) and (max-width: 1023px)">
     <link rel="stylesheet" href="styles/lg_empreend.css" media="(min-width: 1024px)">
+
+    
+
+    <!-- <link rel="stylesheet" href="styles/ficha-carrossel.css"> -->
     <!-- link para o Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
@@ -22,8 +28,8 @@
 <body>
     <header>
         
-
         <nav class="menu-pages">
+
             <div class="logo">
                 <a href="index.html">
                     <!-- <img src="../images/logo_linear_br.png" alt="Logo da Construtora Linear"> -->
@@ -31,61 +37,37 @@
 
                 </a>
             </div>
+
             <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="linear.html">Linear desde 1981</a></li>
                 <li><a href="empreendimentos.html">Empreendimentos</a></li>
                 <li><a href="portifolio.html">Portifólio</a></li>
-                <li class="corretores"><a href="corretores.html">Nossos Corretores</a>
+                <li class="corretores"><a href="#">Nossos Corretores</a>
                     <ul class="submenu">
-                        <li><a href="https://wa.me/553196656945?text=Olá%20Tião!%20Tenho%20interesse%20no%20empreendimento%20Leonardo%20da%20Vinci!">Sebastião/zap</a></li>
+                        <!--Já abre o whatsapp no numero do corretor-->
+                        <!-- <li><a href="https://api.whatsapp.com/send?phone=553196656945">Sebastião/zap</a></li> -->
+                        <!--abre o whatsapp-->
+                        <li><a href="https://wa.me/553196656945?text=Olá%20Sebastião!%20Tenho%20interesse%20no%20empreendimento%20Leonardo%20da%20Vinci!">Sebastião/zap</a></li>
+                        <!--envia mensagem direto para o zap do corretor-->
+                        <!-- <li><a href="https://wa.me/5531992230038?text=Tenho%20interesse%20no%20empreendimento!" target="_blank"> -->
+                            <!-- Kelly/zap</a> -->
                         <li><a href="https://wa.me/553196656945?text=Olá%20Afonso!%20Tenho%20interesse%20no%20empreendimento%20Leonardo%20da%20Vinci!">Afonso/zap</a></li>
                         
-                        </li>
                     </ul>
                 </li>
             </ul>
-            
-            <!--Icone do menu sanduiche para ser visto em celulares-->
-        <!-- <div class="menu-toggle" onclick="toggleMenu()"> -->
-            <!-- <div></div>linha 1 do sanduiche -->
-            <!-- <div></div>linha 2 do sanduiche -->
-            <!-- <div></div>linha 3 do sanduiche -->
-        <!-- </div> -->
         </nav>
         
 
     </header>
-    <!-- <main>
-        <h1>Empreendimentos em BH</h1>
-        <section class="empreendimento">
-          <h2>Residencial Leonardo da Vinci</h2>
-          <div class="galeria">
-            <img src="/images/foto_principal.png" alt="Fachada" />
-            <img src="/images/foto_principal2.png" alt="Hall de entrada" />
-            <img src="/images/foto_principal3.png" alt="Cozinha planejada" />
-          </div>
-          <a href="#" class="ficha-btn">Ficha técnica</a>
-        </section> -->
-
-        <!-- <div class="imagens-container-mobile">
-        <div class="carousel-container-small">
-            <img src="/images/davinci_mobile_capa.jpg" alt="Edificio Leonardo da Vinci Frente">
-            <img src="/images/davinci_mobile01.jpg" alt="Edificio Leonardo da Vinci Piscina">
-            <img src="/images/davinci_mobile02.jpg" alt="Edificio Leonardo da Vinci Piscina">
-            <img src="/images/davinci_mobile03.jpg" alt="Edificio Leonardo da Vinci Piscina">
-            <img src="/images/davinci_mobile04.jpg" alt="Edificio Leonardo da Vinci Piscina">
-            <img src="/images/davinci_mobile05.jpg" alt="Edificio Leonardo da Vinci Piscina">
-            <img src="/images/davinci_mobile06.jpg" alt="Edificio Leonardo da Vinci Piscina">
-        </div> -->
-    <!-- </div> -->
     <main>
-        
         <section class="empreendimento">
           <h1>Empreendimentos em BH</h1>
           <h2>Residencial Leonardo da Vinci</h2>
@@ -103,11 +85,16 @@
             </figure>
           </div>
           
-          <a href="#" class="ficha-btn">Ficha técnica</a>
+          
         </section>
-      </main>
+        <!-- <section class="ficha-section">
+            <a href="#" class="ficha-btn">Ficha técnica</a> -->
+            <!-- <button class="ficha-btn">Ficha técnica</button>
+        </section> --> 
+
 
     </main>
+    
     
 
     <footer class="large-footer">
@@ -192,8 +179,8 @@
             <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="logomarca do instagram"></a>
             <a href="https://www.linkedin.com/"><img src="images/linkedin.png" alt="logomarca do linkedin"></a> -->
 
-            <a href="https://pt-br.facebook.com/"><img src="https://patrickarmani.github.io/construtora-linear/images/facebook.png" alt="logomarca do facebook"></a>
-            <a href="https://www.instagram.com/"><img src="https://patrickarmani.github.io/construtora-linear/images/instagram.png" alt="logomarca do instagram"></a>
+            <a href="https://www.facebook.com/share/1A44GhMBUp/?mibextid=wwXIfr"><img src="https://patrickarmani.github.io/construtora-linear/images/facebook.png" alt="logomarca do facebook"></a>
+            <a href="https://www.instagram.com/p/DGzAKAqM4IX/?igsh=MWU1cHllbWs2cmV1eQ==""><img src="https://patrickarmani.github.io/construtora-linear/images/instagram.png" alt="logomarca do instagram"></a>
             <a href="https://www.linkedin.com/"><img src="https://patrickarmani.github.io/construtora-linear/images/linkedin.png" alt="logomarca do linkedin"></a>
             
         </div>
@@ -210,9 +197,7 @@
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script src="scripts/btn_ficha.js"></script>
-</body>
-
+    <!-- <script src="scritps/ficha-tecnica.js"></script> -->
 </body>
 
 </html>

@@ -45,7 +45,7 @@
     h1 {
         text-align: center;
         margin-top: 40px;
-        font-size: 2.5em;
+        font-size: 2.5rem;
     }
 
     /*--------------------------------------------------start header----------------------------------------------------*/
@@ -218,51 +218,51 @@
     }
 
     /* --- contêiner mantém alinhamento como no seu layout --- */
-.galeria {
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-  }
+    /* .galeria {
+        /* display:flex; */
+        /* justify-content:center; */
+        /* gap:20px; */
+        /* flex-wrap:wrap; */
+    /* }  */
   
-  /* --- cartão da imagem --- */
-.card {
-    overflow:hidden;                  /* corta o zoom excedente */
-    border-radius:8px;
-    transform:translateY(20px);
-    opacity:0;
-    animation:fadeUp .8s ease forwards;   /* fade‑in ao entrar */
-}
+    /* --- cartão da imagem --- */
+    .card {
+        overflow:hidden;                  /* corta o zoom excedente */
+        border-radius:8px;
+        transform:translateY(20px);
+        opacity:0;
+        animation:fadeUp .8s ease forwards;   /* fade‑in ao entrar */
+    }
   
-.card img{
-    width:100%;
-    height:auto;
-    display:block;
-    transition:transform .5s ease, filter .5s ease, box-shadow .5s ease;
-}
-  
-  /* --- efeito hover --- */
-.card:hover img{
-    transform:scale(1.08);            /* zoom leve */
-    filter:brightness(1.15) contrast(1.05);
-    box-shadow:0 20px 25px -10px rgba(0,0,0,.45);
-}
+    .card img{
+        width:100%;
+        height:auto;
+        /* display:block; */
+        transition:transform .5s ease, filter .5s ease, box-shadow .5s ease;
+    }
+    
+    /* --- efeito hover --- */
+    .card:hover img{
+        transform:scale(1.08);            /* zoom leve */
+        filter:brightness(1.15) contrast(1.05);
+        box-shadow:0 20px 25px -10px rgba(0,0,0,.45);
+    }
   
   /* --- animação de entrada --- */
-@keyframes fadeUp{
-    to{
-      transform:translateY(0);
-      opacity:1;
+    @keyframes fadeUp{
+        to{
+        transform:translateY(0);
+        opacity:1;
+        }
     }
-}
   
 /* opcional: atraso incremental para efeito cascata */
   .card:nth-child(1){ animation-delay:.1s }
   .card:nth-child(2){ animation-delay:.25s }
   .card:nth-child(3){ animation-delay:.4s }
   
-      
-.ficha-btn {
+
+  /* .ficha-btn {
     display: inline-block;
     padding: 10px 20px;
     background: #222;
@@ -270,16 +270,16 @@
     text-decoration: none;
     font-weight: bold;
     border-radius: 6px;
-    transition: background .25s ease-in-out;
-}
+  } */
   
- /* --- novo bloco: efeito hover (passar o cursor) --- */
-.ficha-btn:hover {
-    background: #2ecc71;   /* mesmo verde da classe .clicked  */
-    color: #fff;           /* texto branco para contraste     */
-}
+  
+      
+  
 
-  
+
+
+
+
 
     /*--------------------------------------------------Fim do Main-------------------------------------------------------*/
 

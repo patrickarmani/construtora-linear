@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta name="author" content="Patrick Marcman">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, orientation=landscape">
+  <title>Empreendimentos</title>
+
+  <!-- Ícones e fontes -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Reset e fontes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="styles/small.css" media="(max-width: 600px)">
+  <link rel="stylesheet" href="styles/medium.css" media="(min-width: 601px)">
+  <link rel="stylesheet" href="styles/lg_empreend.css" media="(min-width: 1024px)">
+  <link rel="stylesheet" href="styles/botao_ficha_tec.css">
+  <link rel="stylesheet" href="styles/ficha_carrossel.css">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav class="menu-pages">
+      <div class="logo">
+        <a href="index.html">
+          <img src="https://patrickarmani.github.io/construtora-linear/images/logo_linear_br.png" alt="logo da construtora linear">
+        </a>
+      </div>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="linear.html">Linear desde 1981</a></li>
+        <li><a href="empreendimentos.html">Empreendimentos</a></li>
+        <li><a href="portifolio.html">Portifólio</a></li>
+        <li class="corretores"><a href="#">Nossos Corretores</a>
+          <ul class="submenu">
+            <li><a href="https://wa.me/553196656945?text=Olá%20Sebastião!%20Tenho%20interesse%20no%20empreendimento%20Leonardo%20da%20Vinci!">Sebastião/zap</a></li>
+            <li><a href="https://wa.me/553196656945?text=Olá%20Afonso!%20Tenho%20interesse%20no%20empreendimento%20Leonardo%20da%20Vinci!">Afonso/zap</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="empreendimento">
+      <h1>Empreendimentos em BH</h1>
+      <h2>Residencial Leonardo da Vinci</h2>
+      <div class="galeria">
+        <figure class="card"><img src="images/foto_principal.png" alt="Fachada"></figure>
+        <figure class="card"><img src="images/foto01.png" alt="Hall de entrada"></figure>
+        <figure class="card"><img src="images/foto02.png" alt="Piscina"></figure>
+      </div>
+    </section>
+
+    <section class="ficha-section">
+      <button class="ficha-btn">Ficha técnica</button>
+    </section>
+  </main>
+
+  <div class="modal" id="modal">
+    <img id="modal-img" src="" alt="Ficha Técnica">
+    <div class="controls">
+      <button id="prev-btn">Anterior</button>
+      <button id="next-btn">Próxima</button>
+      <button id="close-btn">Fechar</button>
+    </div>
+  </div>
+
+  <footer class="large-footer">... (conteúdo do footer original omitido para clareza) ...</footer>
+
+  <footer class="footer-small">... (idem acima) ...</footer>
+
+  <!-- Scripts existentes -->
+  <script src="scripts/menu.js"></script>
+  <script src="scripts/footer.js"></script>
+  <script src="scripts/hamburger_menu.js"></script>
+  <script src="scripts/open_menu_hamb.js"></script>
+
+  <!-- Script funcional separado -->
+  <script src="scripts/ficha_carrossel.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

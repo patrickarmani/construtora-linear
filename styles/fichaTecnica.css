@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    padding: 50px;
+  }
+
+  #fichaBtn {
+    width: 130px;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+
+  #fichaBtn.clicked {
+    background-color: red;
+    color: white;
+  }
+
+  #modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid #ccc;
+    padding: 20px;
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 10px;
+  }
+
+  #modal img {
+    max-width: 600px;
+    max-height: auto;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 999;
+  }

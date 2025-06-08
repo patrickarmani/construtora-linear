@@ -1,0 +1,410 @@
+@media screen and (min-width: 601px) and (max-width: 1023px) {
+    :root {
+        /* Cores escolhidas para a paleta */
+        --primary-color: #4B4B4B;
+        --secondary-color: #B0B0B0;
+        --accent1-color: #00CED1;
+        --accent2-color: #FFA500;
+        --accent3-color: #9CA67B;
+        --accent4-color:#650A0B;
+        --accent5-color:#063970;
+        --site-plan-background-logo: #FFFFFF;
+    
+        /* Cores escolhidas de acordo com a paleta */
+        --headline-color-on-white: #4B4B4B;
+        --headline-color-on-color: #FFFFFF;
+        --paragraph-color-on-white: #4B4B4B;
+        --paragraph-color-on-color: #B0B0B0;
+        --paragraph-background-color: #FFFFFF;
+        --nav-link-color: #00CED1;
+        --nav-background-color: #4B4B4B;
+        --nav-hover-link-color: #FFA500;
+        --nav-hover-background-color: #B0B0B0;
+    
+        /* Fontes selecionadas */
+        --heading-font: 'Spartan', Arial, Helvetica, sans-serif;
+        --paragraph-font: 'Oswald', Arial, Helvetica, sans-serif;
+    }
+    
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: var(--paragraph-font);
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    h1, h2, h3, h4 {
+        font-family: var(--heading-font);
+    }
+
+    /*--------------------------------------------------start header----------------------------------------------------*/
+    header {
+        /* background-color: #4a4848; */
+        background-color: #898B88;
+        display: flex; /*ele vai alinhar os elementos filhos dentro do header.*/
+        justify-content: space-between; /*Espaço igual entre os itens */ 
+        align-items: center; /*Alinha os itens no centro verticalmente */
+        width: 80%;
+        height: auto;
+        border-bottom: 9px solid #5D7CA6;
+        padding: 10px;
+    }
+
+    header nav.menu-pages {
+        display: flex; /*ele vai alinhar os elementos filhos dentro do header.*/
+        justify-content: space-between; /* Espaço igual entre os itens */
+        font-size: 0.6rem ;
+
+    }
+
+    header nav.menu-pages div.logo img {
+        margin-left: 1rem;
+        margin-right: 1rem; /* Adiciona distância entre a logo e o menu */
+        width: 100px;
+        height: auto;
+
+    }
+
+    header nav.menu-pages ul.menu {
+        display: flex;              /*Exibe os itens na horizontal */
+        justify-content: space-between; /* Espaço igual entre os itens */
+        list-style: none;         /* Remove os bollets das listas */
+        align-items: center;        /* Centraliza o conteúdo verticalmente */
+        margin: 0;                /* Remove o espaço extra da lista */
+        padding: 0;               /* Remove o padding da lista */
+        gap: 1rem;                  /* Espaço de 11px entre os itens */
+        
+    }
+
+    header nav.menu-pages ul.menu li a{
+        background-color: var(--primary-color);
+        color: #FFFFFF;
+        width: 110px;               /* Largura de 105px para cada item */
+        height: 30px;               /* Altura de 30px para cada item */
+        padding: 5px 10px;          /* Adiciona padding para espaçamento interno dos itens */
+        border: 0.05px solid white; /* Contorno de borda com espessura de 0.05px */
+        border-radius: 6px;         /* Bordas arredondadas com raio de 6px */
+        display: flex;              /* Garante que os itens fiquem em linha */
+        justify-content: center;    /* Centraliza o conteúdo horizontalmente */
+        align-items: center;        /* Centraliza o conteúdo verticalmente */
+        box-shadow: #4B4B4B;
+        text-decoration: none;      /*Remove os sublinhados*/
+    }
+
+    header nav.menu-pages ul.menu li a:hover {
+        background-color: var(--primary-color);
+        color: var(--accent1-color);
+        border: 1.5px solid white;
+    }
+
+
+    header nav.menu-pages ul.menu li.corretores a {
+        background-color: var(--accent4-color);
+
+    }
+
+    header nav.menu-pages ul.menu li.corretores:hover a {
+        background-color: var(--accent1-color);
+        border: 1.5px solid white;
+        color: black;
+    }
+
+            /*-------------------------------- Estilização do Submenu ------------------------------------------- */
+    header nav.menu-pages ul.menu li ul.submenu {
+        display: none;               /* Oculta o submenu por padrão */
+        position: absolute;          /* Faz com que o submenu flutue */
+        background-color: rgba(6, 57, 112, 0.7); /* 70% de transparência */
+        list-style: none;            /* Remove bolinhas da lista */
+        padding: 0;
+        margin: 0.3125rem 0 0 0;
+        border-radius: 0.375rem;
+    }
+
+    header nav.menu-pages ul.menu li.corretores:hover ul.submenu {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        display: block;              /* Mostra o submenu ao passar o mouse */
+    }
+                /*<<<<<<<<<<<Responsavel pela cor das tags de navegação principais>>>>>>>>>>>>*/
+    header nav.menu-pages ul.menu li.corretores ul.submenu li a {
+        width: 5rem;               /* Largura em rem para tornar o tamanho proporcional */
+        height: 1.875rem;            /* Altura em rem para proporção com a largura */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-color);
+        text-decoration: none;
+        border: 0.0625rem solid var(--accent3-color); /* Bordas ajustadas com rem */
+        border-radius: 0.275rem;      /* Bordas arredondadas com rem */
+        margin-bottom: 0.5rem;
+}
+
+
+    /*<<<<<<<<<<<Responsavel pela cor das tags de navegação pricipais>>>>>>>>>>>>*/
+
+    header nav.menu-pages ul.menu li.corretores ul.submenu li a:hover {
+        background-color: var(--accent2-color); /* Muda a cor para alaranjado ao passar o mouse */
+        color: black;
+    }
+
+    /*-------------------------------- Fim da Estilização do Submenu ------------------------------------------- */
+    
+    .hamburger {
+        display: none;
+    }
+
+    /*---------------------------------------------------Inicio do Main ---------------------------------------------------*/
+    main {
+        display: flex; /* Deve vir antes das propriedades relacionadas ao flexbox */
+        flex-direction: row; /* Define a direção dos itens no flex container */
+        justify-content: flex-start; /* Alinha itens ao início do eixo principal */
+        align-items: center; /* Centraliza os itens no eixo transversal */
+        
+        width: 100%; /* Define o tamanho */
+        position: relative; /* Define o contexto para posicionamento */
+        
+        /* background-image: url('../images/background.jpg'); Configurações de fundo */
+        background-size: cover; /* Faz o fundo cobrir todo o espaço */
+        background-position: center -65vh; /* Reposiciona o fundo subindo 65% */
+        background-repeat: no-repeat ;
+        z-index: -1;
+    }
+    main::before{
+        content:"";
+        position:absolute;
+        inset:0;                       /* ocupa toda a área do <main> */
+        background-image:url("../images/vitruviano.jpg");
+        background-size:70%;
+        background-position:center -30vh;
+        background-repeat:no-repeat;
+        opacity:0.3;                   /* 30 % opaco → 70 % transparente */
+        z-index:-1;                    /* atrás do conteúdo real */
+      }    
+    
+    .imagens-container-mobile {
+        display: none;
+    }
+
+    .empreendimento {
+
+        text-align: center;
+        padding: 10px 10px;
+    }
+    .empreendimento h1 {
+        color: var(--headline-color-on-white);
+    }
+    .empreendimento h2 {
+        font-family: 'Brush Script MT', cursive;
+        font-size: 2em;
+        margin-bottom: 15px;
+      }
+      
+    .galeria {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .galeria img {
+        width:90%; 
+        max-width:450px; 
+        /* border-radius:8px;  */
+        box-shadow:0 0 10px var(--headline-color-on-white)
+    }      
+    /* --- cartão da imagem --- */
+    .card {
+        overflow:hidden;                  /* corta o zoom excedente */
+        border-radius:8px;
+        transform:translateY(20px);
+        opacity:0;
+        animation:fadeUp .8s ease forwards;   /* fade‑in ao entrar */
+    }
+  
+    .card img{
+        width:50%;
+        height:auto;
+        /* display:block; */
+        transition:transform .5s ease, filter .5s ease, box-shadow .5s ease;
+    }
+    
+    /* --- efeito hover --- */
+    .card:hover img{
+        transform:scale(1.08);            /* zoom leve */
+        filter:brightness(1.15) contrast(1.05);
+        box-shadow:0 20px 25px -10px rgba(0,0,0,.45);
+    }
+  /* --- animação de entrada --- */
+    @keyframes fadeUp{
+        to{
+        transform:translateY(0);
+        opacity:1;
+        }
+    }
+  
+/* opcional: atraso incremental para efeito cascata */
+  .card:nth-child(1){ animation-delay:.1s }
+  .card:nth-child(2){ animation-delay:.25s }
+  .card:nth-child(3){ animation-delay:.4s }    
+      
+   /*--------------------------------------------------Fim do Main-------------------------------------------------------*/
+    
+
+    /*--------------------------------------------------inicio do ----Footer---------------------------------------------------*/
+footer.footer-small {
+    display: none;
+    }
+
+footer.large-footer {
+    color: var(--headline-color-on-color); /* Cor do texto */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+    bottom: 0;
+    /* top: -15.4vh; */
+    width: 100%;
+    /* background-color: var(--primary-color); */
+    background-color: #898B88;
+    height: 30vh;
+    /* margin-bottom: 20px;  */
+    /* padding: 0rem; */
+    border-top: 9px solid #5D7CA6;
+    position: relative;  /* Adicionando 'relative' no contêiner */
+    
+
+}
+
+footer div.logo_footer a img {
+    display: flex; /*Torna o logo um contêiner*/
+    align-items: center; /* Centraliza a imagem verticalmente */
+    /* justify-content: center; Opcional: centraliza horizontalmente se necessário */
+    justify-content: flex-start; /*Alinha*/
+}
+
+footer.large-footer div.logo_footer a img {
+    width: 120px;
+    height: auto;
+    margin-left: 2rem; /* Mantém próximo à margem esquerda do `footer` */
+}
+
+
+footer.large-footer div.maps img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 6rem; /* Espaçamento entre `logo_footer` e `maps` */
+    width: 30%;
+    height: auto;
+}
+
+
+/* 
+footer.large-footer div.maps a img {
+    
+} */
+
+footer.large-footer p.footertext{
+    flex: 1; /*Faz o texto ocupar o espaço restante */
+    /*display: block; */
+    color: #FFFFFF;
+    font-family: var(--paragraph-font);
+    font-size: 0.8rem;
+    text-align: justify;
+    line-height: 1.5;
+    left: -2rem; /* Espaçamento entre `maps` e `footertext` */
+    column-count: 2;/* Define o número de colunas*/
+    column-gap: 0.5rem; /*Define o espaçamento entre as colunas */
+    text-decoration: none; /* Opcional: Remove o sublinhado */
+    
+}
+
+p.pfooter {
+    color: var(--headline-color-on-color);
+}
+
+footer.large-footer div.footertext p.pfooter {
+    color: #FFFFFF;
+    top: 2rem;
+    text-decoration: none; /* Opcional: Remove o sublinhado */
+}
+
+footer.large-footer div.footertext p.pfooter a.highlight {
+    color: var(--accent3-color);
+    text-decoration: none; /* Opcional: Remove o sublinhado */
+}
+footer.large-footer div.footertext p.pfooter a.highlight:hover {
+    text-decoration: underline; /* Opcional: Adiciona sublinhado ao passar o mouse */
+}
+
+/* footer.large-footer div.social-icons {
+    display: flex;
+    /* gap: 0.4rem; Espaçamento entre os ícones */
+    /* margin-right: 3rem; Alinha os ícones à direita 
+} */
+
+footer.large-footer div.social-icons a img {
+    display: flex;
+    width: 30px; /* Largura dos ícones */
+    height: auto; /* Altura dos ícones */
+    gap: 0.4rem; /* Espaçamento entre os ícones */
+    object-fit: contain; /* Garante que as proporções sejam mantidas */
+    margin-right: 1rem; /* Distância do lado direito */
+    z-index: 1000;
+}
+
+/* footer.large-footer div.social-icons a {
+    margin-right: 10%; /*Distância da borda direita
+} */
+
+
+
+footer.large-footer div.social-icons {
+    display: flex;
+    gap: 1rem; /* Espaçamento entre os ícones */
+    /* width: 30%; */
+    /* height: auto; */
+     
+ } 
+
+
+footer.large-footer p.pfooter {
+    font-family: var(--paragraph-font);
+    font-size: 0.7rem; /* Reduzir o tamanho do texto */
+    text-align: left;
+    margin-right: 2rem; /*controlo o quão distante esta o texto do mapa e logo linerar do footer*/
+    margin-bottom: 1rem;
+    
+}
+
+footer.large-footer p.pfooter a.highlight {
+    color: var(--accent1-color);
+    text-decoration: none; /* Opcional: Remove o sublinhado */
+}
+
+ /* CSS para o footer de telas maiores */
+.footer-small {
+    display: none; /* Esconde o footer para telas maiores que 767px */
+}
+
+a {
+    font-family: var(--paragraph-font);
+    color:#FFFFFF;
+    text-decoration: none;
+}
+
+
+ /*--------------------------------------------------final do ----Footer---------------------------------------------------*/
+
+
+
+
+
+}
