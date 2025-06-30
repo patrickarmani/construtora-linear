@@ -220,15 +220,15 @@
                 const fullSrc = img.getAttribute("data-src") || img.src;
 
                 if (img.hasAttribute("data-src")) {
-                    img.src = fullSrc; // força carregamento
+                    img.src = fullSrc;
                     img.removeAttribute("data-src");
                 }
 
-                modalImg.src = fullSrc;
+                // Aguardar um pouco para garantir o carregamento
                 setTimeout(() => {
+                    modalImg.src = fullSrc;
                     modal.classList.add("show");
                 }, 100);
-
             }
         });
     });
@@ -243,6 +243,7 @@
         }
     });
 </script>
+
 
 
 
