@@ -258,21 +258,25 @@ html {
 
 /*---------------------------------------------------Inicio do Main ---------------------------------------------------*/
     main {
+        margin-top: 15vh;
+        position: relative;
         display: block; /* Torna o main um contêiner flex */
         flex-direction: row; /* Define a direção dos itens no flex container */
         justify-content: flex-start; /* Alinha itens ao início do eixo principal */
 
         width: 100%; /* Define o tamanho */
+        overflow-x: hidden;
         position: relative; /*Define o contexto para posicionamento
         
         /* background-image: url('../images/vitruviano.jpg'); Configurações de fundo */
         background-size: 80%; /* Faz o fundo cobrir todo o espaço */
         background-position: center -35vh; /* Reposiciona o fundo subindo 45% */
         background-repeat: no-repeat ;
-        z-index: -1;
+        z-index: 0;
     }
 
     main::before{
+        display: none;
         content:"";
         margin-top: 15vh;
         margin-left: -13em;
@@ -292,10 +296,20 @@ html {
     }
 
     .empreendimento {
-        margin-top: 15vh;
+        padding-top: 2rem;
+        margin-top: 2vh;
         text-align: center;
         padding: 5px 5px;
+        padding-bottom: 30vh; /* altura do footer + espaço extra */
     }
+
+    .empreendimento h1,
+    .empreendimento h2 {
+        margin-top: 0.5vh;
+        position: relative;
+        z-index: 5;
+    }
+
     .empreendimento h1 {
         font-size: 4em;
         color: var(--headline-color-on-white);
@@ -303,43 +317,66 @@ html {
     .empreendimento h2 {
         font-family: 'Brush Script MT', cursive;
         font-size: 4em;
-        margin-bottom: -15vh;
+        /* margin-bottom: -15vh; */
       }
       
     .galeria {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: -10px;
-        margin-bottom: 20px;
+        gap: 40px;
+        margin-bottom: 15px;
+        overflow-x: hidden;
     }
       
     .galeria img {
         width:100%; 
         /* max-width:450px;  */
         /* border-radius:8px;  */
-        box-shadow:0 0 10px var(--headline-color-on-white)
+        box-shadow:0 10px 10px var(--headline-color-on-white)
     }
 
     .card {
+        display: flex;
+        justify-content: center;
         overflow:hidden;                  /* corta o zoom excedente */
         border-radius:8px;
-        transform:translateY(20px);
+        transform:translateY(30px);
         opacity:0;
-        animation:fadeUp .8s ease forwards;   /* fade‑in ao entrar */
+        animation:fadeUp 1s ease forwards;   /* fade‑in ao entrar */
+        align-items: center;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        width: 100%;
+        aspect-ratio: 5/4;
+
+        
+       
+        
     }
   
         .card img {
-            margin-top: 28vh;
-            width:90%;
+            display: block;
+            margin: 0 auto;
+            margin-top: 0;
+            width: 100%;
+            max-width: 450px;
             height:auto;
-            /* display:block; */
+            object-fit: cover;
+            object-position: center;
+            box-shadow: 4px 4px 8px #858585;
+            padding: 10px;
+            display:block;
             transition:transform .5s ease, filter .5s ease, box-shadow .5s ease;
+            border: 4px;
         }
     
     /* --- efeito hover --- */
     .card:hover img{
-        transform:scale(1.08);            /* zoom leve */
+        transform:scale(1.10);            /* zoom leve */
         filter:brightness(1.15) contrast(1.05);
         box-shadow:0 20px 25px -10px rgba(0,0,0,.45);
     }
@@ -377,14 +414,14 @@ footer.footer-small {
     text-align: center;
     /* position: fixed; Fixa o footer na janela */
     position: fixed;
-    bottom: 20vh; /* Posiciona o footer no final da janela */
+    bottom: 0;/*20vh;  Posiciona o footer no final da janela */
     /* left: 0; Garante alinhamento na lateral esquerda */
     width: 100%; /* Faz com que o footer ocupe toda a largura */
     height: 25vh;
     z-index: 999; /* Garante que esteja acima de outros elementos */
     border-top: 10px solid #5D7CA6;
     /* display: none; */
-    transform: translateY(100%); /* Oculto fora da tela */
+    transform: 0; /* Oculto fora da tela */
     transition: transform 0.3s ease-in-out;
     
 }
@@ -450,7 +487,7 @@ footer.footer-small div.smallsocial-icons a img{
 }
 
 footer.footer-small div.smallsocial-icons a img:hover {
-    transform: scale(1.2); /* Aumenta ligeiramente o tamanho */
+    transform: scale(1.5); /* Aumenta ligeiramente o tamanho */
     transition: transform 0.3s ease-in-out;
     filter: brightness(1.2); /* Aumenta o brilho */
 }
@@ -462,4 +499,8 @@ a {
 }
 
 /* -----------------------------------------------------------pagina em posição paisagem-----------------------------------------*/
-
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    .modal {
+        display: none !important;
+    }
+}
