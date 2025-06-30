@@ -209,38 +209,41 @@
     const modalImg = document.getElementById("modalImage");
     const closeModal = document.getElementById("closeModal");
 
-    // Aplica zoom nas imagens .card apenas em tablets no modo paisagem
     document.querySelectorAll(".card img").forEach(img => {
         img.style.cursor = "zoom-in";
 
         img.addEventListener("click", () => {
-            const isTabletWidth = window.innerWidth >= 601 && window.innerWidth <= 1023;
+            const isTablet = window.innerWidth >= 601 && window.innerWidth <= 1023;
             const isLandscape = window.innerWidth > window.innerHeight;
 
-            if (isTabletWidth && isLandscape) {
-                // Usa o data-src se ainda não tiver carregado a imagem
+            if (isTablet && isLandscape) {
                 const fullSrc = img.getAttribute("data-src") || img.src;
+
+                if (img.hasAttribute("data-src")) {
+                    img.src = fullSrc; // força carregamento
+                    img.removeAttribute("data-src");
+                }
+
                 modalImg.src = fullSrc;
-                modal.classList.add("show");
-                modal.style.display = "flex";
+                setTimeout(() => {
+                    modal.classList.add("show");
+                }, 100);
+
             }
         });
     });
 
-    // Fecha o modal ao clicar no botão X
     closeModal.addEventListener("click", () => {
         modal.classList.remove("show");
-        modal.style.display = "none";
     });
 
-    // Fecha o modal se clicar fora da imagem
     modal.addEventListener("click", (event) => {
         if (event.target === modal) {
             modal.classList.remove("show");
-            modal.style.display = "none";
         }
     });
 </script>
+
 
 
 

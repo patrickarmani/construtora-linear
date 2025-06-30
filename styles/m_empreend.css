@@ -448,6 +448,9 @@ a {
 }
 
 
+.modal.show {
+    display: flex !important;
+}
 
 
 
