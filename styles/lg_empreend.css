@@ -236,6 +236,7 @@
   
     .card img{
         width:100%;
+        max-width: 300px;
         height:auto;
         /* display:block; */
         transition:transform .5s ease, filter .5s ease, box-shadow .5s ease;
