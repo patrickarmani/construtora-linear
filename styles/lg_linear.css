@@ -197,7 +197,7 @@
         padding:2rem 0;
         font-family: var(--heading-font);
         font-size:2.5rem;
-        font-weight:300;
+        
         color:var(--headline-color-on-color);
         /* margin-bottom: 4rem; acrescimo */
         /* text-align: center acrescimo */
@@ -278,7 +278,7 @@
         /* top: -3.2rem; */
         /* left: 0; */
         /* width: 50%; */
-        background-color: var(--headline-color-on-white);
+        background-color: black;
         /* color: var(--accent1-color); */
         text-align: center;
         padding: 0.5rem;
@@ -289,7 +289,7 @@
     }
 
     .missao {
-        margin-top: -3.1rem;
+        margin-top: -3.65rem;
         margin-left: -1.5rem;
         width: 50%;
         padding: 0.5rem;
@@ -298,11 +298,23 @@
     }
 
     .visao {
-        margin-top: -2.50rem;
+        margin-top: -3.1rem;
+        margin-left: 9.7rem;
+        width: 50%;
+        padding: 0.4rem;
+        background-color: rgba(75,75,75,0.7);
+        color: #FFFFFF;
+        /* background: #4B4B4Bb3; */
+        /* opacity: 0.8; 50% transparente */
+        z-index: -2;
+    }
+
+    .visao:hover {
+        margin-top: -3.1rem;
         margin-left: 9.7rem;
         width: 50%;
         padding: 0.5rem;
-        background-color: rgba(75,75,75,0.7);
+        background-color: var(--accent5-color);
         color: #FFFFFF;
         /* background: #4B4B4Bb3; */
         /* opacity: 0.8; 50% transparente */
@@ -349,7 +361,7 @@
     .card-left-top,
     .card-left-bottom {
     position: absolute;
-    transition: all 0.8 s ease-in-out;
+    transition: all 0.5 s ease-in-out;
     }
 
     .card-left-top.on-top {

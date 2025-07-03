@@ -409,6 +409,10 @@ a {
     text-decoration: none;
 }
 
+footer.smallfootertext {
+    font-size: 0.2rem;
+
+}
 
  /*--------------------------------------------------final do ----Footer---------------------------------------------------*/
 .modal {

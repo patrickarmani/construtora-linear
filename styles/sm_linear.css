@@ -1,0 +1,654 @@
+:root {
+    /* Cores escolhidas para a paleta */
+    --primary-color: #4B4B4B;
+    --secondary-color: #B0B0B0;
+    --accent1-color: #00CED1;
+    --accent2-color: #FFA500;
+    --accent3-color: #9CA67B;
+    --accent4-color:#650A0B;
+    --accent5-color:#063970;
+    --site-plan-background-logo: #FFFFFF;
+
+    /* Cores escolhidas de acordo com a paleta */
+    --headline-color-on-white: #4B4B4B;
+    --headline-color-on-color: #FFFFFF;
+    --paragraph-color-on-white: #4B4B4B;
+    --paragraph-color-on-color: #B0B0B0;
+    --paragraph-background-color: #FFFFFF;
+    --nav-link-color: #00CED1;
+    --nav-background-color: #4B4B4B;
+    --nav-hover-link-color: #FFA500;
+    --nav-hover-background-color: #B0B0B0;
+
+    /* Fontes selecionadas */
+    --heading-font: 'Spartan', Arial, Helvetica, sans-serif;
+    --paragraph-font: 'Oswald', Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo base - Mobile First */
+
+html {
+    font-size: 0.7rem;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    body {
+        font-size: 0.7rem;
+    }
+
+    h1, h2, h3, h4 {
+        font-family: var(--heading-font);
+    }
+
+    h1 {
+        font-size: 0.7rem; /* Isso será 24px, mas escalável */
+    }
+
+    p {
+        font-size: 1.2rem; /* Isso será 16px, mas escalável */
+        font-family: var(--paragraph-font);
+    }
+
+    nav {
+        flex-direction: column; /* Caso tenha um menu de navegação */
+    }
+    
+    /*--------------------------------------------------start header----------------------------------------------------*/
+
+    header {
+        /*posicionamento*/
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+
+        /*dimensões*/
+        width: 100%;
+        height: 15vh;
+
+        /*layout*/
+        display: flex; /* Alinha os elementos filhos dentro do header */
+        justify-content: center; /* Espaço igual entre os itens */
+        align-items: center; /* Alinha os itens no centro verticalmente */
+
+        /*estilização*/
+        /* background-color: #4a4848;         */
+        background-color: #898B88;
+        border-bottom: 10px solid #5D7CA6;
+        padding: 0.2rem;
+        
+
+    }
+
+    header nav.menu-pages {
+        display: flex; /* Alinha os itens do menu */
+        justify-content: space-between; /* Espaço igual entre os itens */
+    }
+
+    header nav.menu-pages div.logo a img {
+        /* margin-left: 0; */
+        margin-right: 12rem; /* Adiciona distância entre a logo e o menu */
+        width: 10rem;
+        height: auto;
+    }
+
+    header nav.menu-pages ul.menu {
+        display: none;
+    }
+
+    header nav.menu-pages div.hamburger {
+        position: fixed; /* Fixa o ícone na tela */
+        align-items: center; /* Alinha os itens no centro verticalmente */
+        display: flex;
+        /* top: 1rem; Ajuste a distância do topo, se necessário */
+        right: 7rem; /* Distância de 30px da borda direita */
+        /* left: 30rem; */
+        padding: 1rem;
+        flex-direction: column;
+        cursor: pointer;
+        
+        z-index: 1; /* Garante que o ícone esteja sobre outros elementos */
+    }
+
+    /* caracteristicas do icone de hamburger*/
+    header nav.menu-pages div.hamburger span {
+        display: block;
+        margin-top: 0.3rem;  /* Ajuste do espaçamento entre as linhas */
+        margin-left: 0.1rem;   /* Centraliza o ícone, remova o deslocamento à esquerda */
+        width: 4rem;      /* Largura ligeiramente reduzida para manter a proporção */
+        height: 0.6rem;      /* Aumenta a altura das linhas para tornar o ícone mais "ergonômico" */
+        background: white;
+        border-radius: 0.325rem; /* Adiciona bordas arredondadas para um toque mais suave */
+        box-shadow: 3px 2px 4px 4px rgba(0, 0, 0, 0.2);
+
+        transition: all 0.3s ease; /* Transição suave quando o menu é ativado */
+}
+
+
+    /* Esconde o menu principal por padrão */
+    header nav.menu-pages ul.menu {
+        display: none;  /* Esconde o menu inicialmente */
+        position: absolute;
+        top: 15vh;
+        right: 0;
+        width: 50%;
+        padding: 0.5rem;
+        background-color: var(--nav-background-color);
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease;
+        opacity: 0;  /* Esconde o menu suavemente */
+        visibility: hidden;
+    }
+    
+    /* Quando o menu é ativado */
+    header nav.menu-pages ul.menu.show {
+        display: flex;
+        flex-direction: column;
+        opacity: 1;  /* Torna visível suavemente */
+        visibility: visible;
+    }
+    
+
+    .hamburger:focus, .hamburger span:focus {
+        outline: 0.125rem solid var(--accent1-color);
+/* Destaque quando o ícone de hambúrguer for focado */
+
+}
+
+    header nav.menu-pages ul.menu li a:focus {
+        outline: 0.125rem solid var(--accent1-color); /* Destaque para links no menu */
+}
+
+    header nav.menu-pages ul.menu li {
+        list-style: none;
+        padding: 0.625rem;
+        text-align: center;
+}
+
+    header nav.menu-pages ul.menu li a {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-family: var(--heading-font);
+        font-size: 1.2rem;
+
+        /* Dimensões */
+        width: 13rem;
+        height: auto;
+        padding: 0.3125rem 0.625rem;
+
+        /* Estilização */
+        border: 0.125rem solid white;
+        border-radius: 0.3175rem;
+        box-shadow: 2px 2px 4px rgba(75, 75, 75, 0.5);
+
+        /* Flexbox para centralizar */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* Animação */
+        transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    header nav.menu-pages ul.menu li.corretores a {
+        background-color: var(--accent4-color);
+        color:#FFFFFF;
+    }
+
+    header nav.menu-pages ul.menu li.corretores:hover a{
+        background-color: var(--accent1-color);
+        border: 0.0875rem solid white; /* Usando rem para borda */
+        color: var(--accent5-color);
+    }
+    /*-------------------------------- Estilização do Submenu ------------------------------------------- */
+    header nav.menu-pages ul.menu li.corretores .submenu {
+        /* Animação de deslizamento */
+        opacity: 0;
+        transform: translateY(-0.625rem);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        
+        /* Estilização */
+        visibility: hidden; /* Mantém o elemento no fluxo, mas invisível */
+        position: absolute;
+        /* background-color: rgba(0, 206, 209, 0.7); Tiffany com 70% de transparência */
+        background-color: rgba(6, 57, 112, 0.7); /* 70% de transparência */
+        list-style: none;
+        padding: 0;
+        margin: 0.3125rem 0 0 0;
+        border-radius: 0.375rem;
+}
+
+/* Quando o submenu estiver visível */
+    header nav.menu-pages ul.menu li.corretores:hover ul.submenu {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+}
+
+    header nav.menu-pages ul.menu li.corretores ul.submenu li a {
+        width: 9rem;               /* Largura em rem para tornar o tamanho proporcional */
+        height: 1.875rem;            /* Altura em rem para proporção com a largura */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-color);
+        text-decoration: none;
+        border: 0.0625rem solid var(--accent3-color); /* Bordas ajustadas com rem */
+        border-radius: 0.275rem;      /* Bordas arredondadas com rem */
+}
+
+    header nav.menu-pages ul.menu li.corretores ul.submenu li a:hover {
+        background-color: var(--accent2-color); /* Muda a cor ao passar o mouse */
+        color: black;
+}
+
+/*-------------------------------- Fim da Estilização do Submenu ------------------------------------------- */
+/* Mostra o menu ao clicar no hambúrguer */
+    header nav.menu-pages ul.menu.show {
+        display: flex;
+}
+
+/*---------------------------------------------------Inicio do Main ---------------------------------------------------*/
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -10rem;
+        padding: 1rem 1rem;
+        gap: 2rem;
+        position: relative;
+        background-image: url('../images/familia_feliz4.jpg'); /* Configurações de fundo */
+        background-size: auto 78vh;        /* Faz a imagem cobrir todo o container */
+        background-repeat: no-repeat;  /* Evita que a imagem se repita */
+        background-position: center;   /* Centraliza a imagem */
+        max-width: 100vw;         /* impede ultrapassar a largura da tela */
+        overflow-x: hidden;       /* oculta qualquer conteúdo que ultrapasse */
+    }
+    /* CARD BASE */
+    .card {
+        position:absolute;
+        background:var(--nav-background-color);
+        /* border: 2px solid #ccc; */
+        /* padding: 1rem; */
+        /* border-radius: 1px; */
+        padding: 1rem 1rem 0.5rem 1.5rem;
+        /* width: 90%; */
+        max-width:360px;
+        /* box-shadow: 0 4px 6px rgba(0,0,0,0.7); */
+        margin-left: 2rem; /* espaço para a aba */
+        /* margin-right: 3rem; /* espaço do card da direita para o canto direito */
+        /* top: 9rem; */
+        cursor: pointer;
+    }
+
+    .card,
+    .cardQuali {
+        position: static !important;
+        width: 100%;
+        max-width: 100%;
+        background: var(--nav-background-color);
+        color: white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        text-align: justify;
+        transition: none;
+  }
+
+    .card p,
+    .cardQuali p {
+        
+        line-height: 1.5rem;
+        padding: 1rem;
+        margin-top: 2rem;
+  }
+
+    .ribbon {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        padding: 0.4rem;
+        margin-bottom: 10rem;
+        background-color: black;
+        color: var(--accent1-color);
+        border-radius: 0.4rem;
+  }
+
+    .missao {
+        background-color: var(--primary-color);
+        color: var(--accent1-color);
+  }
+
+   .visao {
+    background-color: var(--accent5-color);
+    color: #fff;
+  }
+
+  .qualidade {
+    background-color: var(--accent2-color);
+    color: #000;
+  }
+  .card-left-top,
+  .card-left-bottom,
+  .card-right {
+    all: unset;
+  }
+
+ /* HEADLINE */
+   .headline {
+        position: absolute;
+        margin-top: 15rem;
+        left: 1rem;
+        font-family: var(--heading-font);
+        font-size: 0.8rem;
+        
+        text-align: center;
+        padding: 1rem 0;
+        color: var(--headline-color-on-color);
+        
+    }
+    /* CARD BASE */
+    .card {
+        position:absolute;
+        background:var(--nav-background-color);
+    
+        padding: 1rem 1rem 0.5rem 1.5rem;
+
+        max-width:360px;
+ 
+        margin-left: 1rem; /* espaço para a aba */
+ 
+        cursor: pointer;
+    }
+    .card p {
+        line-height:2rem;
+        font-size:1.2rem;
+        font-weight: 300;
+        font-stretch: extra-condensed;
+        text-align: left;
+    }
+    
+    .cardQuali { /*afeta somente o cartão de titulo QUALIDADE*/
+        position:absolute;
+        background:var(--nav-background-color);
+        padding: 1rem 1rem 0.5rem 1.5rem;
+        max-width:360px;
+        margin-right: 2rem; /* espaço para a aba */
+        cursor: pointer;
+    }
+
+    .cardQuali p {
+        line-height:2.5rem;
+        font-size:1.2rem;
+        font-weight: 300;
+        font-stretch: extra-condensed;
+        text-align: left;
+        color:#FFFFFF
+    }
+
+    /* left stack */
+    .card-left-top {
+        top: 2.8rem;
+        left: 1rem;
+        z-index:2;
+        background:var(--nav-background-color);
+        color:var(--headline-color-on-color)
+    }
+    .card-left-bottom {
+        top: 2.8rem;/*movimenta a tag inferior que fica abaixo da Missao*/
+        left: 0.2rem;
+        width: 35rem;
+        height: 22.2rem;
+        /* padding: 2rem; */
+        background-color: var(--headline-color-on-color); /* fundo escuro */
+        color: var(--headline-color-on-color); /* texto branco */
+        
+    }
+
+        /* title ribbons */
+    .ribbon {
+        position: absolute;
+        margin-top:-5.2rem; 
+        /* left: 0; */
+        /* width: 50%; */
+        background-color: black;
+        /* color: var(--accent1-color); */
+        text-align: center;
+        padding: 0.5rem;
+        font-weight: bold;
+        border-top-left-radius: 1px;
+        border-top-right-radius: 1px;
+
+    }
+
+    .missao {
+        font-family: var(--heading-font);
+        margin-top: -3.2rem;
+        margin-left: -1.5rem;
+        font-size: 2em;
+        width: 50%;
+        padding: 0.5rem;
+        background: var(--primary-color);
+        color: var(--accent1-color);
+    }
+
+    .visao {
+        margin-top: 3.1rem;
+        margin-left: 9.7rem;
+        width: 50%;
+        padding: 0.4rem;
+        background-color: rgba(75,75,75,0.7);
+        color: #FFFFFF;
+        /* background: #4B4B4Bb3; */
+        /* opacity: 0.8; 50% transparente */
+        z-index: -2;
+    }
+    
+    .visao:hover {
+        margin-top: -3.1rem;
+        margin-left: 9.7rem;
+        width: 50%;
+        padding: 0.5rem;
+        background-color: var(--accent5-color);
+        color: #FFFFFF;
+        /* background: #4B4B4Bb3; */
+        /* opacity: 0.8; 50% transparente */
+        z-index: -2;
+    }
+
+
+    .qualidade {
+        margin-top: -3.1rem;
+        margin-left: 8.5rem;
+        width: 50%;
+        padding: 0.5rem;
+        background: #4B4B4B;
+        color: var(--accent1-color);
+        z-index: 2;
+    }
+    /* Cards específicos lado esquerdo */
+    .card-left-top {
+        top:7.8rem;
+        align-self: flex-start;
+        color: var(--accent1-color);
+    }
+
+    .card-left-bottom {
+        width: 372px;
+
+        align-self: flex-start;
+        margin-top: -1.6rem; /* sobreposição sutil com o topo anterior */
+        margin-left: 0.9rem;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+  
+    /* Card direito */
+    .card-right {
+        margin-top: 4rem;
+        margin-right: 1rem;
+        width: 20rem;
+        height: 20rem;
+        align-self: flex-end;
+        color: var(--primary-color);
+        
+    }
+
+    
+
+    .card-left-top,
+    .card-left-bottom {
+    position: absolute;
+    transition: all 0.5 s ease-in-out;
+    }
+
+    .card-left-top.on-top {
+        z-index: 2;
+    }
+
+    .card-left-bottom.on-top {
+        z-index: 2;
+    }
+
+    .card {
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .card.on-top {
+        background-color: var(--primary-color); /* cor diferente quando está por cima */
+        /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
+        z-index: 2;
+      }
+      
+      .card:not(.on-top) {
+        background-color: var(--primary-color); /* cor padrão */
+        z-index: 1;
+      }
+
+
+
+
+    /* bring to front on click */
+    .on-top {
+        z-index:3 !important;
+        transform:translate(-20px,-10px, -10px, -10px);
+    }
+
+
+/*---------------------------------------------------Fim do Main ---------------------------------------------------*/
+
+/*---------------------------------------------------inicio do footer ---------------------------------------------------*/
+
+footer.large-footer {
+    display: none;
+}
+
+footer.footer-small {
+    /* background-color: var(--primary-color); Cor de fundo */
+    background-color: #898B88;
+    color: var(--headline-color-on-color); /* Cor do texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding: 20rem 10rem; */
+    text-align: center;
+    /* position: fixed; Fixa o footer na janela */
+    position: fixed;
+    bottom: 0;/*20vh;  Posiciona o footer no final da janela */
+    /* left: 0; Garante alinhamento na lateral esquerda */
+    width: 100%; /* Faz com que o footer ocupe toda a largura */
+    height: 25vh;
+    z-index: 999; /* Garante que esteja acima de outros elementos */
+    border-top: 10px solid #5D7CA6;
+    /* display: none; */
+    transform: 0; /* Oculto fora da tela */
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+footer.footer-small div.smallContainer {
+    display: flex;
+    flex-direction: row;
+    bottom: 1vh;/*controla a distancia da logo, mapa e texto em relação ao topo do footer*/
+    position: relative;
+   
+    /* gap: 5px; */
+    color:#FFFFFF;
+}
+
+footer.footer-small .smallLogoFooter a img {
+    /* margin-bottom: 15rem; */
+    width: 60%; /* Ajuste o tamanho do logo */
+    margin: - 0.5rem;
+    /* margin-bottom: 0.125 rem; */
+   
+}
+
+footer.footer-small div.smallMaps a img {
+    width: 60%; /* Ajuste o tamanho do ícone */
+    margin-right: 3rem;
+    /* margin-bottom: 10rem; */
+}
+
+/* .footer-small p {
+    color: white;
+} */
+
+footer.footer-small p.smallfootertext {
+    font-family: var(--paragraph-font);
+    font-size: 0.7rem; /* Reduzir o tamanho do texto */
+    text-align: left;
+    margin-right: 4rem; /*controlo o quão distante esta o texto do mapa e logo linerar do footer*/
+    margin-bottom: 1.5rem;
+    
+}
+
+footer.footer-small p.smallfootertext a.highlight {
+    color: var(--accent1-color);
+    text-decoration: none; /* Opcional: Remove o sublinhado */
+}
+
+
+footer.footer-small div.smallsocial-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 2rem;
+    /* width: 10vw;
+    height: auto; */
+    /* margin: 8rem 15rem; Espaçamento entre os ícones */
+}
+
+footer.footer-small div.smallsocial-icons a img{
+    width: 40px;
+    height: auto;
+}
+
+footer.footer-small div.smallsocial-icons a img:hover {
+    transform: scale(1.5); /* Aumenta ligeiramente o tamanho */
+    transition: transform 0.3s ease-in-out;
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+a {
+    font-family: var(--paragraph-font);
+    color:#FFFFFF;
+    text-decoration: none;
+}
+
+/* -----------------------------------------------------------pagina em posição paisagem-----------------------------------------*/
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    .modal {
+        display: none !important;
+    }
+}
