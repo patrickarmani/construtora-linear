@@ -259,19 +259,46 @@ html {
 /*---------------------------------------------------Inicio do Main ---------------------------------------------------*/
     main {
         display: flex;
+        flex:1;
         flex-direction: column;
         align-items: center;
-        margin-top: -10rem;
-        padding: 1rem 1rem;
-        gap: 2rem;
+        margin-top: 0;
+        padding: 17vh 1rem 25vh; /* topo = header fixo | inferior = footer fixo */
+        gap: 5rem;
         position: relative;
-        background-image: url('../images/familia_feliz4.jpg'); /* Configurações de fundo */
-        background-size: auto 78vh;        /* Faz a imagem cobrir todo o container */
-        background-repeat: no-repeat;  /* Evita que a imagem se repita */
-        background-position: center;   /* Centraliza a imagem */
-        max-width: 100vw;         /* impede ultrapassar a largura da tela */
-        overflow-x: hidden;       /* oculta qualquer conteúdo que ultrapasse */
+        background-image: url('../images/familia_feliz4.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        max-width: 100vw;
+        overflow-x: hidden;
+        overflow-y: auto;
+        min-height: 100vh;
     }
+
+    main::before {
+        content:"";
+        position:absolute;
+        inset:0;
+        background:url('wireframe_acab_linear2_pl2.jpg') center/cover no-repeat;
+        filter:brightness(.6);
+        z-index:-1
+    }
+
+   /* HEADLINE */
+   .headline {
+        position: absolute;
+        top: 10rem;
+        left: 5rem;
+        padding: 1rem 0;
+        font-family: var(--heading-font);
+        font-size: 2.5rem;
+        color:var(--headline-color-on-color);
+        margin-bottom: 4rem; /*acrescimo*/
+        text-align: center /*crescimo */
+
+    }
+
     /* CARD BASE */
     .card {
         position:absolute;
@@ -289,102 +316,35 @@ html {
         cursor: pointer;
     }
 
-    .card,
-    .cardQuali {
+    
+    .cardQuali {/*afeta somente o cartão de titulo QUALIDADE*/
         position: static !important;
-        width: 100%;
-        max-width: 100%;
+        width: 80%;
+        max-width: 360px;
+        margin-right: -2rem; /* espaço para a aba */
         background: var(--nav-background-color);
         color: white;
         padding: 1rem;
-        border-radius: 0.5rem;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-        text-align: justify;
-        transition: none;
-  }
-
-    .card p,
-    .cardQuali p {
-        
-        line-height: 1.5rem;
-        padding: 1rem;
-        margin-top: 2rem;
-  }
-
-    .ribbon {
-        position: relative;
-        width: 100%;
-        text-align: center;
-        padding: 0.4rem;
-        margin-bottom: 10rem;
-        background-color: black;
-        color: var(--accent1-color);
-        border-radius: 0.4rem;
-  }
-
-    .missao {
-        background-color: var(--primary-color);
-        color: var(--accent1-color);
-  }
-
-   .visao {
-    background-color: var(--accent5-color);
-    color: #fff;
-  }
-
-  .qualidade {
-    background-color: var(--accent2-color);
-    color: #000;
-  }
-  .card-left-top,
-  .card-left-bottom,
-  .card-right {
-    all: unset;
-  }
-
- /* HEADLINE */
-   .headline {
-        position: absolute;
-        margin-top: 15rem;
-        left: 1rem;
-        font-family: var(--heading-font);
-        font-size: 0.8rem;
-        
-        text-align: center;
-        padding: 1rem 0;
-        color: var(--headline-color-on-color);
-        
-    }
-    /* CARD BASE */
-    .card {
-        position:absolute;
-        background:var(--nav-background-color);
-    
-        padding: 1rem 1rem 0.5rem 1.5rem;
-
-        max-width:360px;
- 
-        margin-left: 1rem; /* espaço para a aba */
- 
         cursor: pointer;
-    }
+  } 
+
+
     .card p {
-        line-height:2rem;
+        line-height:2.5rem;
         font-size:1.2rem;
         font-weight: 300;
         font-stretch: extra-condensed;
         text-align: left;
     }
-    
+
     .cardQuali { /*afeta somente o cartão de titulo QUALIDADE*/
-        position:absolute;
+        position:relative;
         background:var(--nav-background-color);
         padding: 1rem 1rem 0.5rem 1.5rem;
         max-width:360px;
-        margin-right: 2rem; /* espaço para a aba */
+        margin-left: 14rem; /* espaço para a aba */
         cursor: pointer;
     }
-
     .cardQuali p {
         line-height:2.5rem;
         font-size:1.2rem;
@@ -393,18 +353,19 @@ html {
         text-align: left;
         color:#FFFFFF
     }
-
+    /* left stack */
     /* left stack */
     .card-left-top {
-        top: 2.8rem;
+        top: 7.8rem;
         left: 1rem;
         z-index:2;
         background:var(--nav-background-color);
         color:var(--headline-color-on-color)
     }
+
     .card-left-bottom {
-        top: 2.8rem;/*movimenta a tag inferior que fica abaixo da Missao*/
-        left: 0.2rem;
+        top: 8.8rem;/*movimenta a tag inferior que fica abaixo da Missao*/
+        left: 2.1rem;
         width: 35rem;
         height: 22.2rem;
         /* padding: 2rem; */
@@ -412,11 +373,10 @@ html {
         color: var(--headline-color-on-color); /* texto branco */
         
     }
-
-        /* title ribbons */
+    /* title ribbons */
     .ribbon {
         position: absolute;
-        margin-top:-5.2rem; 
+        /* top: -3.2rem; */
         /* left: 0; */
         /* width: 50%; */
         background-color: black;
@@ -431,8 +391,8 @@ html {
 
     .missao {
         font-family: var(--heading-font);
-        margin-top: -3.2rem;
-        margin-left: -1.5rem;
+        margin-top: -3.85rem;
+        margin-left: -1.52rem;
         font-size: 2em;
         width: 50%;
         padding: 0.5rem;
@@ -440,21 +400,25 @@ html {
         color: var(--accent1-color);
     }
 
+
     .visao {
-        margin-top: 3.1rem;
-        margin-left: 9.7rem;
+        font-family: var(--heading-font);
+        font-size: 2em;
+        margin-top: -3.5rem;
+        margin-left: 14.5rem;
         width: 50%;
-        padding: 0.4rem;
+        
         background-color: rgba(75,75,75,0.7);
         color: #FFFFFF;
         /* background: #4B4B4Bb3; */
         /* opacity: 0.8; 50% transparente */
-        z-index: -2;
+        z-index: 2;
     }
-    
+
+
     .visao:hover {
-        margin-top: -3.1rem;
-        margin-left: 9.7rem;
+        margin-top: -3.5rem;
+        margin-left: 14.5rem;
         width: 50%;
         padding: 0.5rem;
         background-color: var(--accent5-color);
@@ -465,16 +429,21 @@ html {
     }
 
 
+
     .qualidade {
-        margin-top: -3.1rem;
-        margin-left: 8.5rem;
+        font-family: var(--heading-font);
+        font-size: 2em;
+        margin-top: -4.0rem;
+        margin-left: 12.7rem;
         width: 50%;
         padding: 0.5rem;
         background: #4B4B4B;
         color: var(--accent1-color);
         z-index: 2;
     }
-    /* Cards específicos lado esquerdo */
+      
+    
+
     .card-left-top {
         top:7.8rem;
         align-self: flex-start;
@@ -485,11 +454,11 @@ html {
         width: 372px;
 
         align-self: flex-start;
-        margin-top: -1.6rem; /* sobreposição sutil com o topo anterior */
+        margin-top: -2.6rem; /* sobreposição sutil com o topo anterior */
         margin-left: 0.9rem;
         background-color: rgba(255, 255, 255, 0.7);
     }
-  
+
     /* Card direito */
     .card-right {
         margin-top: 4rem;
@@ -500,12 +469,9 @@ html {
         color: var(--primary-color);
         
     }
-
-    
-
-    .card-left-top,
+    .card-left-top, 
     .card-left-bottom {
-    position: absolute;
+    position: relative;
     transition: all 0.5 s ease-in-out;
     }
 
@@ -520,20 +486,16 @@ html {
     .card {
         transition: all 0.3s ease-in-out;
       }
-      
       .card.on-top {
         background-color: var(--primary-color); /* cor diferente quando está por cima */
         /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
         z-index: 2;
       }
-      
+
       .card:not(.on-top) {
         background-color: var(--primary-color); /* cor padrão */
         z-index: 1;
       }
-
-
-
 
     /* bring to front on click */
     .on-top {
@@ -542,9 +504,25 @@ html {
     }
 
 
+
+
+    
+
+  
+
 /*---------------------------------------------------Fim do Main ---------------------------------------------------*/
 
 /*---------------------------------------------------inicio do footer ---------------------------------------------------*/
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh; /*Altura do footer */
+    z-index: 1000;
+}
+
 
 footer.large-footer {
     display: none;

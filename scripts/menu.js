@@ -22,6 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
     submenu.addEventListener("mouseleave", function() {
         timeout = setTimeout(function() {
             submenu.style.display = "none";  // Fecha após o mouse sair
-        }, 3000);
+        }, 1000);
     });
 });
