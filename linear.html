@@ -11,7 +11,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="styles/sm_empreend.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="styles/sm_linear.css" media="(max-width: 600px)">
     <link rel="stylesheet" href="styles/md_linear.css" media="(min-width: 601px)">
     <link rel="stylesheet" href="styles/lg_linear.css" media="(min-width: 1024px)">
     <!-- link para o Font Awesome -->
@@ -86,13 +86,13 @@
 
         <!-- LEFT CARDS -->
         <div id="cardBottom" class="on-top">
-          <div id="visao" class="card">Visão</div>
-          <p id="texto-visao">Nossa visão é ser referência em inovação e sustentabilidade no setor da construção civil, liderando a transformação de cidades mais inteligentes, inclusivas e resilientes.</p>
-        </div>
-        <div id="cardTop" class="card-left-top-container">
-          <div id="missao" class="card">Missão</div>
-          <p id="texto-missao">Desde 1981, nossa missão é entregar empreendimentos que transformem vidas, criando ambientes seguros, confortáveis e de alto valor agregado. Mais do que estruturas, buscamos oferecer experiências que elevem o bem‑estar e a satisfação dos clientes, sempre com compromisso com a excelência e atentos às demandas do mercado.</p>
-        </div>
+            <div id="visao" class="card">Visão</div>
+                <p id="texto-visao">Nossa visão é ser referência em inovação e sustentabilidade no setor da construção civil, liderando a transformação de cidades mais inteligentes, inclusivas e resilientes.</p>
+            </div>
+            <div id="cardTop" class="card-left-top-container">
+                <div id="missao" class="card">Missão</div>
+                    <p id="texto-missao">Desde 1981, nossa missão é entregar empreendimentos que transformem vidas, criando ambientes seguros, confortáveis e de alto valor agregado. Mais do que estruturas, buscamos oferecer experiências que elevem o bem‑estar e a satisfação dos clientes, sempre com compromisso com a excelência e atentos às demandas do mercado.</p>
+            </div>
     
         <!-- RIGHT CARD -->
         <div>
@@ -205,7 +205,7 @@
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
     <!--para os cards-->
-    <script>
+    <!-- <script>
         const cardTop = document.getElementById('cardTop');
         const cardBottom = document.getElementById('cardBottom');
       
@@ -216,7 +216,20 @@
       
         cardBottom.addEventListener('click',swapCards);
         cardTop.addEventListener('click',swapCards);
-      </script>
+      </script> -->
+
+      <script>
+        const cardTop = document.getElementById('cardTop');
+        const cardBottom = document.getElementById('cardBottom');
+
+        function alternarZindex() {
+            cardTop.classList.toggle('on-top');
+            cardBottom.classList.toggle('on-top');
+        }
+
+        cardTop.addEventListener('click', alternarZindex);
+        cardBottom.addEventListener('click', alternarZindex);
+     </script>
 </body>
 
 </html>
