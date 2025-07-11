@@ -9,7 +9,7 @@
         --accent4-color:#650A0B;
         --accent5-color:#063970;
         --site-plan-background-logo: #FFFFFF;
-    
+        --accent4-color-transparent:rgba(101, 10, 11, 1);
         /* Cores escolhidas de acordo com a paleta */
         --headline-color-on-white: #4B4B4B;
         --headline-color-on-color: #FFFFFF;
@@ -18,8 +18,11 @@
         --paragraph-background-color: #FFFFFF;
         --nav-link-color: #00CED1;
         --nav-background-color: #4B4B4B;
+        --nav-background-color-transparent: rgba(75, 75, 75, 0.5); 
         --nav-hover-link-color: #FFA500;
         --nav-hover-background-color: #B0B0B0;
+        
+
     
         /* Fontes selecionadas */
         --heading-font: 'Spartan', Arial, Helvetica, sans-serif;
@@ -197,179 +200,125 @@
         padding:2rem 0;
         font-family: var(--heading-font);
         font-size:2.5rem;
-        
+        font-weight:300;
         color:var(--headline-color-on-color);
         /* margin-bottom: 4rem; acrescimo */
         /* text-align: center acrescimo */
 
     }
-
-    /* CARD BASE */
-    .card {
-        position:absolute;
-        background:var(--nav-background-color);
-        /* border: 2px solid #ccc; */
-        /* padding: 1rem; */
-        /* border-radius: 1px; */
-        padding: 1rem 1rem 0.5rem 1.5rem;
-        /* width: 90%; */
-        max-width:360px;
-        /* box-shadow: 0 4px 6px rgba(0,0,0,0.7); */
-        margin-left: 2rem; /* espaço para a aba */
-        /* margin-right: 3rem; /* espaço do card da direita para o canto direito */
-        /* top: 9rem; */
-        cursor: pointer;
-    }
-
-    
-    }
-    
-    .card p {
-        line-height:2.5rem;
-        font-size:1.2rem;
-        font-weight: 300;
-        font-stretch: extra-condensed;
-        text-align: left;
-    }
-
-    .cardQuali { /*afeta somente o cartão de titulo QUALIDADE*/
-        position:absolute;
-        background:var(--nav-background-color);
-        padding: 1rem 1rem 0.5rem 1.5rem;
-        max-width:360px;
-        margin-right: 2rem; /* espaço para a aba */
-        cursor: pointer;
-    }
-
-    .cardQuali p {
-        line-height:2.5rem;
-        font-size:1.2rem;
-        font-weight: 300;
-        font-stretch: extra-condensed;
-        text-align: left;
-        color:#FFFFFF
-    }
-            
-
-    /* left stack */
-    .card-left-top {
-        top: 7.8rem;
-        left: 1rem;
-        z-index:2;
-        background:var(--nav-background-color);
-        color:var(--headline-color-on-color)
-    }
-    .card-left-bottom {
-        top: 8.8rem;/*movimenta a tag inferior que fica abaixo da Missao*/
-        left: 2.1rem;
-        width: 35rem;
-        height: 22.2rem;
-        /* padding: 2rem; */
-        background-color: var(--headline-color-on-color); /* fundo escuro */
-        color: var(--headline-color-on-color); /* texto branco */
-        
-    }
-
-    
-
-    /* title ribbons */
-    .ribbon {
+    #missao {
         position: absolute;
-        /* top: -3.2rem; */
-        /* left: 0; */
-        /* width: 50%; */
-        background-color: black;
-        /* color: var(--accent1-color); */
+        top: clamp(6.5rem, -10vh, 12rem); /* se adapta */
+        left: 2.8rem; /* distância da borda esquerda da tela */
+        background-color: var(--nav-background-color);
+        width: clamp(12rem, 11rem, 30rem);
+        padding: 0.7rem;
+        color: var(--accent1-color);
         text-align: center;
-        padding: 0.5rem;
-        font-weight: bold;
-        border-top-left-radius: 1px;
-        border-top-right-radius: 1px;
+        font-family:var(--paragraph-font);
+        font-weight: 700;
+        font-size: clamp(0.9rem, 1.2vw, 2rem); 
+    }
+
+    #visao {
+        position: absolute;
+        top: clamp(6.5rem, -10vh, 15rem); /* se adapta */
+        left: 14.9rem; /* distância da borda esquerda da tela */
+        background-color: var(--accent4-color-transparent);
+        width: clamp(12rem, 11rem, 30rem);
+        padding: 0.7rem;
+        color: var(--headline-color-on-color);
+        text-align: center;
+        font-family:var(--paragraph-font);
+        font-weight: 700;
+        font-size: clamp(0.9rem, 1.2vw, 2rem); 
 
     }
 
-    .missao {
-        margin-top: -3.65rem;
-        margin-left: -1.5rem;
-        width: 50%;
-        padding: 0.5rem;
-        background: var(--primary-color);
-        color: var(--accent1-color);
-    }
-
-    .visao {
-        margin-top: -3.1rem;
-        margin-left: 9.7rem;
-        width: 50%;
-        padding: 0.4rem;
-        background-color: rgba(75,75,75,0.7);
-        color: #FFFFFF;
-        /* background: #4B4B4Bb3; */
-        /* opacity: 0.8; 50% transparente */
-        z-index: -2;
-    }
-
-    .visao:hover {
-        margin-top: -3.1rem;
-        margin-left: 9.7rem;
-        width: 50%;
-        padding: 0.5rem;
+    #visão:hover {
+        position: absolute;
+        top: clamp(6.5rem, -10vh, 12rem); /* se adapta */
+        left: 14.9rem; /* distância da borda esquerda da tela */
         background-color: var(--accent5-color);
-        color: #FFFFFF;
-        /* background: #4B4B4Bb3; */
-        /* opacity: 0.8; 50% transparente */
+        border: solid var(--accent1-color);
+        width: clamp(12rem, 11rem, 30rem);
+        padding: 0.7rem;
+        color: var(--headline-color-on-color);
+        text-align: center;
+        font-family:var(--paragraph-font);
+        font-weight: 700;
+        font-size: clamp(0.9rem, 1.2vw, 2rem); 
         z-index: -2;
     }
 
 
-    .qualidade {
-        margin-top: -3.1rem;
-        margin-left: 8.5rem;
-        width: 50%;
-        padding: 0.5rem;
-        background: #4B4B4B;
-        color: var(--accent1-color);
-        z-index: 2;
-    }
-    /* Cards específicos lado esquerdo */
-    .card-left-top {
-        top:7.8rem;
-        align-self: flex-start;
-        color: var(--accent1-color);
-    }
-  
-    .card-left-bottom {
-        width: 372px;
 
-        align-self: flex-start;
-        margin-top: -1.6rem; /* sobreposição sutil com o topo anterior */
-        margin-left: 0.9rem;
-        background-color: rgba(255, 255, 255, 0.7);
-    }
-  
-    /* Card direito */
-    .card-right {
-        margin-top: 4rem;
-        margin-right: 1rem;
-        width: 20rem;
-        height: 20rem;
-        align-self: flex-end;
-        color: var(--primary-color);
-        
+    #qualidade {
+        position: absolute;
+        top: clamp(12rem, 10vh, 18rem); /* distância do topo */
+        right: clamp(0.5rem, 2vw, 6rem); /* distância da borda direita da tela */
+        background-color: var(--nav-background-color);
+        width: clamp(12rem, 15rem, 30rem);
+        padding: 0.7rem;
+        color: var(--accent1-color);
+        text-align: center;
+        font-family:var(--paragraph-font);
+        font-weight: 700;
+        font-size: clamp(0.7rem, 1.2vw, 2rem); 
     }
 
-    .card-left-top,
-    .card-left-bottom {
+    #texto-missao {
+        position: absolute;
+        top: clamp(9.3rem, 10vh, 18rem); /* distância do topo */
+        left: 2.8rem;
+        background-color: var(--nav-background-color);
+        color: var(--accent1-color);
+        padding: 1.5rem;
+        width: clamp(10rem, 25%, 30rem);
+        height: clamp(21.5rem, 22%, 25rem);
+        font-family: var(--paragraph-font);
+        font-size: clamp(1.3rem, 1vw, 2.3rem);
+        font-weight: 300;
+        line-height: 1.5;
+
+    }
+
+    #texto-visao {
+        position: absolute;
+        top: clamp(9.3rem, 10vh, 18rem); /* distância do topo */
+        left: 2.8rem;
+        background-color: var(--accent4-color);
+        color: var(--headline-color-on-color);
+        padding: 1.5rem;
+        width: clamp(10rem, 25%, 30rem);
+        height: clamp(21.5rem, 22%, 25rem);
+        font-family: var(--paragraph-font);
+        font-size: clamp(1.3rem, 1vw, 2.3rem);
+        font-weight: 300;
+        line-height: 1.5;
+    }
+
+
+    #texto-qualidade {
+        position: absolute;
+        top: clamp(14.9rem, 10vh, 18rem); /* distância do topo */
+        right: 2rem;
+        background-color: var(--nav-background-color);
+        color: var(--accent1-color);
+        padding: 1.5rem;
+        width: clamp(10rem, 22%, 30rem);
+        height: clamp(15.5rem, 20%, 25rem); /*controla a altura do box do texto qualidade*/
+        font-family: var(--paragraph-font);
+        font-size: clamp(1.3rem, 1vw, 2rem);
+        font-weight: 300;
+        line-height: 1.5;
+
+    }
+
+    .visao,
+    .missao {
     position: absolute;
     transition: all 0.5 s ease-in-out;
-    }
-
-    .card-left-top.on-top {
-        z-index: 2;
-    }
-
-    .card-left-bottom.on-top {
-        z-index: 2;
     }
 
     .card {
@@ -528,5 +477,4 @@ a {
     color:#FFFFFF;
     text-decoration: none;
 }
-/*--------------------------------------------------fim do ----Footer---------------------------------------------------*/
-
+/*--------------------------------------------------fim do ----Footer--------------------------------------------------
