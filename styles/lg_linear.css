@@ -100,7 +100,7 @@
         display: flex; /* Garante que os itens fiquem em linha */
         justify-content: center; /* Centraliza o conteúdo horizontalmente */
         align-items: center; /* Centraliza o conteúdo verticalmente */
-        box-shadow: box-shadow: 0 0 10px #4B4B4B;
+        box-shadow: 1px 1px 4px var(--primary-color);
         text-decoration: none; /* Remove os sublinhados */
     }
 
