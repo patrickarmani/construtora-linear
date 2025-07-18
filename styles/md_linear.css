@@ -1,74 +1,531 @@
+    :root {
+        /* Cores escolhidas para a paleta */
+        --primary-color: #4B4B4B;
+        --secondary-color: #B0B0B0;
+        --accent1-color: #00CED1;
+        --accent2-color: #FFA500;
+        --accent3-color: #9CA67B;
+        --accent4-color:#650A0B;
+        --accent5-color:#063970;
+        --site-plan-background-logo: #FFFFFF;
+        --accent4-color-transparent:rgba(101, 10, 11, 1);
+        /* Cores escolhidas de acordo com a paleta */
+        --headline-color-on-white: #4B4B4B;
+        --headline-color-on-color: #FFFFFF;
+        --paragraph-color-on-white: #4B4B4B;
+        --paragraph-color-on-color: #B0B0B0;
+        --paragraph-background-color: #FFFFFF;
+        --nav-link-color: #00CED1;
+        --nav-background-color: #4B4B4B;
+        --nav-background-color-transparent: rgba(75, 75, 75, 0.5); 
+        --nav-hover-link-color: #FFA500;
+        --nav-hover-background-color: #B0B0B0;
+        
+
+    
+        /* Fontes selecionadas */
+        --heading-font: 'Spartan', Arial, Helvetica, sans-serif;
+        --paragraph-font: 'Oswald', Arial, Helvetica, sans-serif;
+    }
+
+
 @media screen and (min-width: 601px) and (max-width: 1023px) {
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* font-family: var(--paragraph-font); */
+    }  
+  
   body {
-    font-size: 0.9rem;
-  }
-
-  header {
-    padding: 0.675rem 1.6rem;
-    gap: 1.6rem;
-  }
-
-  header nav.menu-pages div.logo img {
-    margin-left: 10.8rem;
-    margin-right: 10.8rem;
-    width: 96px;
-  }
-
-  header nav.menu-pages ul.menu li a {
-    width: 136px;
-    height: 24px;
-    padding: 4px 8px;
-    border-radius: 4.8px;
-  }
-
-  main {
-    padding: 1.6rem;
-    gap: 1.6rem;
-  }
-
-  .headline {
-    top: -1.6rem;
-    left: 1.6rem;
-    font-size: 2.2rem;
-    padding: 1.6rem 0;
-  }
-
-  #missao, #visao, #visão:hover, #qualidade {
-    left: 2.24rem;
-    width: clamp(10rem, 10rem, 24rem);
-    padding: 0.56rem;
-    font-size: clamp(0.81rem, 1vw, 1.8rem);
-  }
-
-  #texto-missao, #texto-visao, #texto-qualidade {
-    padding: 1.2rem;
-    font-size: clamp(1.17rem, 0.9vw, 2rem);
-    width: clamp(8rem, 20%, 24rem);
-    height: clamp(17rem, 18%, 20rem);
-  }
-
-  footer.large-footer div.logo_footer a img {
-    width: 96px;
-    margin-left: 1.6rem;
-  }
-
-  footer.large-footer div.maps img {
-    left: 2.4rem;
-    width: 24%;
-  }
-
-  footer.large-footer div.footertext {
-    font-size: 0.45rem;
-    column-gap: 0.4rem;
-  }
-
-  footer.large-footer div.social-icons a img {
-    width: 40px;
-    margin-right: 1.6rem;
-  }
-
-  footer.large-footer p.pfooter {
     font-size: 1rem;
-    margin-right: 0.8rem;
   }
+
+  h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+  }
+  
+  
+    /*--------------------------------------------------start header----------------------------------------------------*/
+    header {
+        /* background-color: #4a4848; */
+        background-color: #898B88;
+        display: flex; /*ele vai alinhar os elementos filhos dentro do header.*/
+        justify-content: space-between; /*Espaço igual entre os itens */ 
+        align-items: center; /*Alinha os itens no centro verticalmente */
+        width: 100%;
+        height: auto;
+        border-bottom: 9px solid #5D7CA6;
+        padding: 10px;
+    }
+
+    header nav.menu-pages {
+        display: flex; /*ele vai alinhar os elementos filhos dentro do header.*/
+        justify-content: space-between; /* Espaço igual entre os itens */
+        font-size: 0.6rem ;
+
+    }
+
+    header nav.menu-pages div.logo img {
+        margin-left: 1rem;
+        margin-right: 1rem; /* Adiciona distância entre a logo e o menu */
+        width: 100px;
+        height: auto;
+
+    }
+
+    header nav.menu-pages ul.menu {
+        display: flex;              /*Exibe os itens na horizontal */
+        justify-content: space-between; /* Espaço igual entre os itens */
+        list-style: none;         /* Remove os bollets das listas */
+        align-items: center;        /* Centraliza o conteúdo verticalmente */
+        margin: 0;                /* Remove o espaço extra da lista */
+        padding: 0;               /* Remove o padding da lista */
+        gap: 1rem;                  /* Espaço de 11px entre os itens */
+        
+    }
+
+    header nav.menu-pages ul.menu li a{
+        background-color: var(--primary-color);
+        color: #FFFFFF;
+        width: 110px;               /* Largura de 105px para cada item */
+        height: 30px;               /* Altura de 30px para cada item */
+        padding: 5px 10px;          /* Adiciona padding para espaçamento interno dos itens */
+        border: 0.05px solid white; /* Contorno de borda com espessura de 0.05px */
+        border-radius: 6px;         /* Bordas arredondadas com raio de 6px */
+        display: flex;              /* Garante que os itens fiquem em linha */
+        justify-content: center;    /* Centraliza o conteúdo horizontalmente */
+        align-items: center;        /* Centraliza o conteúdo verticalmente */
+        box-shadow: #4B4B4B;
+        text-decoration: none;      /*Remove os sublinhados*/
+    }
+
+    header nav.menu-pages ul.menu li a:hover {
+        background-color: var(--primary-color);
+        color: var(--accent1-color);
+        border: 1.5px solid white;
+    }
+
+
+    header nav.menu-pages ul.menu li.corretores a {
+        background-color: var(--accent4-color);
+
+    }
+
+    header nav.menu-pages ul.menu li.corretores:hover a {
+        background-color: var(--accent1-color);
+        border: 1.5px solid white;
+        color: black;
+    }
+
+            /*-------------------------------- Estilização do Submenu ------------------------------------------- */
+    header nav.menu-pages ul.menu li ul.submenu {
+        display: none;               /* Oculta o submenu por padrão */
+        position: absolute;          /* Faz com que o submenu flutue */
+        background-color: rgba(6, 57, 112, 0.7); /* 70% de transparência */
+        list-style: none;            /* Remove bolinhas da lista */
+        padding: 0;
+        margin: 0.3125rem 0 0 0;
+        border-radius: 0.375rem;
+        z-index: 2;
+    }
+
+    header nav.menu-pages ul.menu li.corretores:hover ul.submenu {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        display: block;              /* Mostra o submenu ao passar o mouse */
+        z-index: 2;
+    }
+                /*<<<<<<<<<<<Responsavel pela cor das tags de navegação principais>>>>>>>>>>>>*/
+    header nav.menu-pages ul.menu li.corretores ul.submenu li a {
+        width: 6rem;               /* Largura em rem para tornar o tamanho proporcional */
+        height: 1.875rem;            /* Altura em rem para proporção com a largura */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-color);
+        text-decoration: none;
+        border: 0.0625rem solid var(--accent3-color); /* Bordas ajustadas com rem */
+        border-radius: 0.275rem;      /* Bordas arredondadas com rem */
+        margin-bottom: 0.5rem;
+        z-index: 2;
+}
+
+
+    /*<<<<<<<<<<<Responsavel pela cor das tags de navegação pricipais>>>>>>>>>>>>*/
+
+    header nav.menu-pages ul.menu li.corretores ul.submenu li a:hover {
+        background-color: var(--accent2-color); /* Muda a cor para alaranjado ao passar o mouse */
+        color: black;
+    }
+
+    /*-------------------------------- Fim da Estilização do Submenu ------------------------------------------- */
+    
+    .hamburger {
+        display: none;
+    }
+
+
+    /*---------------------------------------------------Inicio do Main ---------------------------------------------------*/
+    main {
+        position:relative;
+        flex:1;
+        display:flex;
+
+        flex-direction: column;/*acrescimo*/
+        width: 100vw;
+        /* min-height: calc(100vh - 15vh - 23vh); */
+        min-height: 100vh;
+        align-items:center;
+        padding: 2rem;/*acrescimo*/
+        gap: 2rem;/*acrescimo*/
+
+        justify-content:flex-start;
+        overflow:hidden;
+        overflow-y: auto;
+        background-image: url('../images/familia_feliz4.jpg'); /* Configurações de fundo */
+        background-size: cover; /* Faz o fundo cobrir todo o espaço */
+        background-position: center; /* ✅ Adiciona isso para centralizar */
+        width: 100vw; /* Define o tamanho */
+        max-width: 100vw;
+        margin-right: 17rem;
+        padding-top: 18vh; /* Acima da altura do header (15vh) */
+    }
+
+    main::before {
+        content:"";
+        position:absolute;
+        inset:0;
+        background:url('wireframe_acab_linear2_pl2.jpg') center/cover no-repeat;
+        filter:brightness(.6);
+        z-index:-1
+    }
+
+   /*--------------------------------------------------Fim do Main-------------------------------------------------------*/
+   /* HEADLINE */
+   .headline {
+        position:absolute;
+        top:-2rem;
+        left:2rem;
+        padding:2rem 0;
+        font-family: var(--heading-font);
+        font-size:1.8rem;
+        font-weight:700;
+        color:var(--headline-color-on-color);
+        /* margin-bottom: 4rem; acrescimo */
+        /* text-align: center acrescimo */
+
+    }
+    
+    #missao {
+        position: absolute;
+        /* top: clamp(-85.5rem, -10vh, 12rem); se adapta */
+        margin-top: -14.5rem;
+        left: -12.4rem; /* distância da borda esquerda da tela */
+        background-color: var(--nav-background-color);
+        width: clamp(10rem, 11rem, 30rem);
+        padding: 0.7rem;
+        color: var(--accent1-color);
+        text-align: center;
+        font-family:var(--paragraph-font);
+        font-weight: 700;
+        font-size: clamp(0.9rem, 1.2vw, 2rem); 
+    } 
+
+    #visao {
+        position: absolute;
+        top: clamp(3.1rem, -10vh, 15rem); /* se adapta */
+        left: -1.5rem; /* distância da borda esquerda da tela */
+        background-color: var(--accent4-color-transparent);
+        width: clamp(11.7rem, 11rem, 30rem);
+        padding: 0.7rem;
+        color: var(--headline-color-on-color);
+        text-align: center;
+        font-family:var(--paragraph-font);
+        font-weight: 700;
+        font-size: clamp(0.9rem, 1.2vw, 2rem); 
+
+    }
+    
+    #visão:hover {
+        display: flex;
+        justify-content: center;
+        align-items: center;      
+        position: absolute;
+        top: clamp(6.5rem, -10vh, 12rem); /* se adapta */
+        left: 14.9rem; /* distância da borda esquerda da tela */
+        background-color: var(--accent5-color);
+        border: solid var(--accent1-color);
+        width: clamp(12rem, 11rem, 30rem);
+        padding: 0.7rem;
+        color: var(--headline-color-on-color);
+        text-align: center;
+        font-family:var(--paragraph-font);
+        font-weight: 700;
+        font-size: clamp(1rem, 1.2vw, 2rem); 
+        z-index: -2;
+    }
+
+    #qualidade {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+
+        /*top: 15rem; distância do topo */
+        margin-top: -28rem;
+        right: 2rem; /* distância da borda direita da tela */
+        background-color: var(--nav-background-color);
+        width: clamp(10rem, 11rem, 30rem);
+        min-height: 3.5rem;
+        padding: 0.7rem;
+        color: var(--accent1-color);
+        text-align: center;
+        font-family:var(--paragraph-font);
+        font-weight: 700;
+        font-size: clamp(1rem, 1.2vw, 2rem); 
+    }
+
+    #texto-missao {
+        position: relative;
+        top: -11.8rem; /* distância do topo */
+        left: -12.4rem;
+        background-color: var(--nav-background-color);
+        color: var(--accent1-color);
+        padding: 1.5rem;
+        width: 22.9rem;
+        height: clamp(21.5rem, 22%, 25rem);
+        font-family: var(--paragraph-font);
+        font-size: clamp(1rem, 1vw, 2.3rem);
+        font-weight: 300;
+        line-height: 1.5;
+
+    }
+    #texto-visao {
+        position: relative;
+        top: 6.3rem;
+        left: -12.2rem;
+        background-color: var(--accent4-color);
+        color: var(--headline-color-on-color);
+        padding: 1.5rem;
+        width: 22.4rem;
+        height: 16rem;
+        font-family: var(--paragraph-font);
+        font-size: clamp(1rem, 1vw, 2.3rem);
+        font-weight: 300;
+        line-height: 1.5;
+    }
+    
+    #texto-qualidade {
+        position: absolute;
+        top: 15.9rem;
+        right: 2rem;
+        background-color: var(--nav-background-color);
+        color: var(--accent1-color);
+        padding: 1.5rem;
+        width: 22rem;
+        height: clamp(10.5rem, 20%, 25rem); /*controla a altura do box do texto qualidade*/
+        font-family: var(--paragraph-font);
+        font-size: clamp(1rem, 1vw, 2rem);
+        font-weight: 300;
+        line-height: 1.5;
+
+    }
+
+    .visao,
+    .missao {
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    }
+
+    .card {
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .card.on-top {
+        background-color: var(--primary-color); /* cor diferente quando está por cima */
+        /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
+        z-index: 2;
+      }
+
+      .card:not(.on-top) {
+        background-color: var(--primary-color); /* cor padrão */
+        z-index: 1;
+      }
+
+    /* bring to front on click */
+    .on-top {
+        z-index:3 !important;
+        /* transform:translate(-2px,-1px); */
+        /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); */
+        transform: scale(1.15); /* cresce 5% sem sair da posição */
+    }
+
+    #cardTop,
+    #cardBottom {
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #cardTop.on-top,
+    #cardBottom.on-top {
+        z-index: 3 !important;
+        transform: scale(1.02);
+        /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); */
+    }
+
+
+    /*--------------------------------------------------inicio do ----Footer---------------------------------------------------*/
+footer.footer-small {
+    display: none;
+    }
+
+footer.large-footer {
+    color: var(--headline-color-on-color); /* Cor do texto */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+    bottom: 0;
+    /* top: -15.4vh; */
+    width: 100%;
+    /* background-color: var(--primary-color); */
+    background-color: #898B88;
+    height: 30vh;
+    /* margin-bottom: 20px;  */
+    /* padding: 0rem; */
+    border-top: 9px solid #5D7CA6;
+    position: relative;  /* Adicionando 'relative' no contêiner */
+    
+
+}
+
+footer div.logo_footer a img {
+    display: flex; /*Torna o logo um contêiner*/
+    align-items: center; /* Centraliza a imagem verticalmente */
+    /* justify-content: center; Opcional: centraliza horizontalmente se necessário */
+    justify-content: flex-start; /*Alinha*/
+}
+
+footer.large-footer div.logo_footer a img {
+    width: 120px;
+    height: auto;
+    margin-left: 2rem; /* Mantém próximo à margem esquerda do `footer` */
+}
+
+
+footer.large-footer div.maps img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 6rem; /* Espaçamento entre `logo_footer` e `maps` */
+    width: 30%;
+    height: auto;
+}
+
+
+/* 
+footer.large-footer div.maps a img {
+    
+} */
+
+footer.large-footer p.footertext{
+    flex: 1; /*Faz o texto ocupar o espaço restante */
+    /*display: block; */
+    color: #FFFFFF;
+    font-family: var(--paragraph-font);
+    font-size: 0.8rem;
+    text-align: justify;
+    line-height: 1.5;
+    left: -2rem; /* Espaçamento entre `maps` e `footertext` */
+    column-count: 2;/* Define o número de colunas*/
+    column-gap: 0.5rem; /*Define o espaçamento entre as colunas */
+    text-decoration: none; /* Opcional: Remove o sublinhado */
+    
+}
+
+p.pfooter {
+    color: var(--headline-color-on-color);
+}
+
+footer.large-footer div.footertext p.pfooter {
+    color: #FFFFFF;
+    top: 2rem;
+    text-decoration: none; /* Opcional: Remove o sublinhado */
+}
+
+footer.large-footer div.footertext p.pfooter a.highlight {
+    color: var(--accent3-color);
+    text-decoration: none; /* Opcional: Remove o sublinhado */
+}
+footer.large-footer div.footertext p.pfooter a.highlight:hover {
+    text-decoration: underline; /* Opcional: Adiciona sublinhado ao passar o mouse */
+}
+
+/* footer.large-footer div.social-icons {
+    display: flex;
+    /* gap: 0.4rem; Espaçamento entre os ícones */
+    /* margin-right: 3rem; Alinha os ícones à direita 
+} */
+
+footer.large-footer div.social-icons a img {
+    display: flex;
+    width: 30px; /* Largura dos ícones */
+    height: auto; /* Altura dos ícones */
+    gap: 0.4rem; /* Espaçamento entre os ícones */
+    object-fit: contain; /* Garante que as proporções sejam mantidas */
+    margin-right: 1rem; /* Distância do lado direito */
+    z-index: 1000;
+}
+
+/* footer.large-footer div.social-icons a {
+    margin-right: 10%; /*Distância da borda direita
+} */
+
+
+
+footer.large-footer div.social-icons {
+    display: flex;
+    gap: 1rem; /* Espaçamento entre os ícones */
+    /* width: 30%; */
+    /* height: auto; */
+     
+ } 
+
+
+footer.large-footer p.pfooter {
+    font-family: var(--paragraph-font);
+    font-size: 0.7rem; /* Reduzir o tamanho do texto */
+    text-align: left;
+    margin-right: 2rem; /*controlo o quão distante esta o texto do mapa e logo linerar do footer*/
+    margin-bottom: 1rem;
+    
+}
+
+footer.large-footer p.pfooter a.highlight {
+    color: var(--accent1-color);
+    text-decoration: none; /* Opcional: Remove o sublinhado */
+}
+
+ /* CSS para o footer de telas maiores */
+.footer-small {
+    display: none; /* Esconde o footer para telas maiores que 767px */
+}
+
+a {
+    font-family: var(--paragraph-font);
+    color:#FFFFFF;
+    text-decoration: none;
+}
+
+
+ /*--------------------------------------------------final do ----Footer---------------------------------------------------*/
+
+
+
+
+
 }

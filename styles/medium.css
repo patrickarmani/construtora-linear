@@ -230,25 +230,6 @@ footer.footer-small {
     display: none;
     }
 
-footer.large-footer {
-    color: var(--headline-color-on-color); /* Cor do texto */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 0;
-    bottom: 0;
-    /* top: -15.4vh; */
-    width: 100%;
-    /* background-color: var(--primary-color); */
-    background-color: #898B88;
-    height: 30vh;
-    /* margin-bottom: 20px;  */
-    /* padding: 0rem; */
-    border-top: 9px solid #5D7CA6;
-    position: relative;  /* Adicionando 'relative' no contêiner */
-    
-
-}
 
 footer div.logo_footer a img {
     display: flex; /*Torna o logo um contêiner*/
@@ -258,7 +239,7 @@ footer div.logo_footer a img {
 }
 
 footer.large-footer div.logo_footer a img {
-    width: 120px;
+    width: 100px;
     height: auto;
     margin-left: 2rem; /* Mantém próximo à margem esquerda do `footer` */
 }
